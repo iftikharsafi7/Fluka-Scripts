@@ -1,0 +1,2204 @@
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8
+TITLE
+DS-20K UPDATED Geometry
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8
+GLOBAL                                          1.        1.
+DEFAULTS                                                              PRECISIO
+* Changed Energy to 1e6 GeV on 20/5/2022- Teena
+BEAM       -1000000.       0.0                                        MUON+
+* Deactivated on 20/5/2022 -Teena
+*BEAMPOS          0.0       0.0      -50.
+* Activated on 20/52022 -Teena
+SOURCE
+IONTRANS    HEAVYION
+MUPHOTON          1.                        VACUUM  @LASTMAT
+PAIRBREM          2.              0.0003
+PHOTONUC          1.                        VACUUM  @LASTMAT
+EMFRAY            4.     world  @LASTREG
+PHYSICS        1000.     1000.     1000.     1000.     1000.     1000.PEATHRES
+*         ---------|---------|---------|---------|---------|---------|
+PHYSICS           1.        1.        1.                              COALESCE
+PHYSICS           3.                                                  EVAPORAT
+PHYSICS           1.       0.1      0.15        2.        2.        1.IONSPLIT
+*         ---------|---------|---------|---------|---------|---------|
+RADDECAY          2.
+* ** --- we use geometry FREE format  -  only thing to remember, there can't be
+* **     any empty lines used within the geometry section, comments need *
+*
+GEOBEGIN                                                              COMBNAME
+    0    0          Muon induced Neutron -- (homestake)
+*
+* --- bodies
+*
+RPP BlckBody   -90000. 90000. -90000. 90000. -90000. 90000.
+RPP Vacuum     -9999. 9999. -9999. 9999. -9999. 9999.
+*
+$start_translat 0 0 -109.2
+* * -------------------------------------------------===============-------------------
+*
+YZP CutView    0.0
+*
+XYP Cut        639.
+*
+RCC Buff_t     -1850. 0.0 639. 4400. 0.0 0.0 1850.
+RPP Buff_b     -1850. 2550. -1850. 1850. -1261. 639.
+*
+RCC Rock_tc    -1750. 0.0 639. 4200. 0.0 0.0 1750.
+RCC Rock_tm    -1500. 0.0 639. 3700. 0.0 0.0 1500.
+RCC Rock_tf    -1275. 0.0 639. 3250. 0.0 0.0 1275.
+*
+RPP Rock_bc    -1750. 2450. -1750. 1750. -1161. 639.
+RPP Rock_bm    -1500. 2200. -1500. 1500. -911. 639.
+RPP Rock_bf    -1275. 1975. -1275. 1275. -686. 639.
+*
+RCC Hall_t     -1050. 0.0 639. 2800. 0.0 0.0 1050.
+RPP Hall_b     -1050. 1750. -1050. 1050. -461. 639.
+*
+* * -------------------------------------------------===============-------------------
+$end_translat 
+*
+*
+RPP Bint_ins   -427.52 427.52 -427.52 427.52 -428.965 361.355
+RPP MDEXT      -427.35 427.35 -427.35 427.35 -428.795 361.155
+RPP Bint_MD1   -300. 300. -300. 300. -300. 300.
+RPP Bint_MD0   -100. 100. -100. 100. -100. 100.
+RPP Bext_ins   -506.58 506.58 -506.58 506.58 -508.025 441.355
+RPP BisW1      -505.68 505.68 -505.68 505.68 -507.125 441.355
+RPP BisPol1    -476.58 476.58 -476.58 476.58 -478.025 441.355
+RPP BisPol3    -476.56 476.56 -476.56 476.56 -478.005 441.355
+RPP BisPol4    -476.54 476.54 -476.54 476.54 -477.985 441.355
+RPP BisW2      -467.72 467.72 -467.72 467.72 -469.165 441.355
+RPP Secm       -476.52 476.52 -476.52 476.52 -477.965 441.355
+RPP BisW       -467.4 467.4 -435. 435. -467.4 467.4
+RPP BisW3      -466.52 466.52 -466.52 466.52 -467.965 441.355
+RPP BisPol2    -465.32 465.32 -465.32 465.32 -466.765 441.355
+RPP RFPol2     -428.72 428.72 -428.72 428.72 361.355 441.355
+RPP BisW4      -428.72 428.72 -428.72 428.72 -430.165 441.275
+RPP Bext_SS    -507.58 507.58 -507.58 507.58 -509.025 442.355
+RPP BexCRIO    -570.2 570.2 -570.5 570.5 -570.2 505.8
+* Back Horizontall 1
+RPP BBCH1      -570.2 570.2 -401.7 -398.3 444.3175 503.8375
+* Backt horizontal 1 transversal1 (solded to SS mambrane)
+RPP BCH1t1     -570.2 570.2 -411.4 -388.6 442.355 444.3175
+* Back horizontal 1 transversal 2
+RPP BCH1t2     -570.2 570.2 -411.4 -388.6 503.8375 505.8
+* Back Horizontal 2
+RPP BBCH2      -570.2 570.2 -241.7 -238.3 444.3175 503.8375
+* Backt horizontal 2 transversal1 (solded to SS mambrane)
+RPP BCH2t1     -570.2 570.2 -251.4 -228.6 442.355 444.3175
+* Backt horizontal 2 transversal1 (solded to SS mambrane)
+RPP BCH2t2     -570.2 570.2 -251.4 -228.6 503.8375 505.8
+* Back Horizontal 3
+RPP BBCH3      -570.2 570.2 -81.7 -78.3 444.3175 503.8375
+* Backt horizontal 3 transversal 1
+RPP BCH3t1     -570.2 570.2 -91.4 -68.6 442.355 444.3175
+RPP BCH3t2     -570.2 570.2 -91.4 -68.6 503.8375 505.8
+* Backt horizontal 4 transversal 2
+RPP BCH4t2     -570.2 570.2 68.6 91.4 503.8375 505.8
+* Backt horizontal 4 transversal 1 (solded to SS mambrane)
+RPP BCH4t1     -570.2 570.2 68.6 91.4 442.355 444.3175
+* Back Horizontall 4
+RPP BBCH4      -570.2 570.2 78.3 81.7 444.3175 503.8375
+* Backt horizontal 5 transversal 1
+RPP BCH5t1     -570.2 570.2 228.6 251.4 442.355 444.3175
+* Back Horizontal 5
+RPP BBCH5      -570.2 570.2 238.3 241.7 444.3175 503.8375
+* Backt horizontal 5 transversal 2
+RPP BCH5t2     -570.2 570.2 228.6 251.4 503.8375 505.8
+* Back Horizontal 6
+RPP BBCH6      -570.2 570.2 398.3 401.7 444.3175 503.8375
+* Backt horizontal 6 transversal 1
+RPP BCH6t1     -570.2 570.2 388.6 411.4 442.355 444.3175
+RPP BCH6t2     -570.2 570.2 388.6 411.4 503.8375 505.8
+* Back Vertical 1
+RPP BBCV1      398.3 401.7 -535. 535. 444.3175 503.8375
+* Back Vertical 1, trasversal1
+RPP BCV1t2     388.6 411.4 -535. 535. 503.8375 505.8
+* Back Vertical 1, trasversal1
+RPP BCV1t1     388.6 411.4 -535. 535. 442.355 444.3175
+* Back Vertical 1, trasversal1
+RPP BCV2t1     228.6 251.4 -535. 535. 442.355 444.3175
+* Back Vertical 2
+RPP BBCV2      238.3 241.7 -535. 535. 444.3175 503.8375
+* Back Vertical 1, trasversal1
+RPP BCV2t3     228.6 251.4 -537.8 537.8 508.4 511.2
+* Back Vertical 1, trasversal1
+RPP BCV2t2     228.6 251.4 -535. 535. 503.8375 505.8
+* Back Vertical 3
+RPP BBCV3      78.3 81.7 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV3t1     68.6 91.4 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV3t2     68.6 91.4 -535. 535. 503.8375 505.8
+* Back Vertical 4
+RPP BBCV4      -81.7 -78.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV4t1     -91.4 -68.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV4t2     -91.4 -68.6 -535. 535. 503.8375 505.8
+* Back Vertical 5
+RPP BBCV5      -241.7 -238.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV5t1     -251.4 -228.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV5t2     -251.4 -228.6 -535. 535. 503.8375 505.8
+* Back Vertical 6
+RPP BBCV6      -401.7 -398.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV6t1     -411.4 -388.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV6t2     -411.4 -388.6 -535. 535. 503.8375 505.8
+* FRont Vertical 6
+RPP BFRV6      -401.7 -398.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV6t1     -411.4 -388.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 2, trasversal2
+RPP BFV6t2     -411.4 -388.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 5
+RPP BFRV5      -241.7 -238.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 5, trasversal
+RPP BFV5t1     -251.4 -228.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 5, trasversal
+RPP BFV5t2     -251.4 -228.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 4
+RPP BFRV4      -81.7 -78.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV4t1     -91.4 -68.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 2, trasversal1
+RPP BFV4t2     -91.4 -68.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 3
+RPP BFRV3      78.3 81.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV3t1     68.6 91.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV3t2     68.6 91.4 -535. 535. -570.2 -568.2375
+* FRont Vertical 2
+RPP BFRV2      238.3 241.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV2t1     228.6 251.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV2t2     228.6 251.4 -535. 535. -570.2 -568.2375
+* FRont Vertical 1
+RPP BFRV1      398.3 401.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 1, trasversal1
+RPP BFV1t1     388.6 411.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV1t2     388.6 411.4 -535. 535. -570.2 -568.2375
+RPP BFH1       -570.2 570.2 -401.7 -398.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH1t1     -570.2 570.2 -411.4 -388.6 -510.9875 -509.025
+* Front horizontal transversal2
+RPP BFH1t2     -570.2 570.2 -411.4 -388.6 -570.2 -568.2375
+RPP BFH2       -570.2 570.2 -241.7 -238.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH2t1     -570.2 570.2 -251.4 -228.6 -510.9875 -509.025
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH2t2     -570.2 570.2 -251.4 -228.6 -570.2 -568.2375
+RPP BFH3       -570.2 570.2 -81.7 -78.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH3t1     -570.2 570.2 -91.4 -68.6 -510.9875 -509.025
+* Front horizontal 3 transversal2
+RPP BFH3t2     -570.2 570.2 -91.4 -68.6 -570.2 -568.2375
+RPP BFH4       -570.2 570.2 78.3 81.7 -568.2375 -510.9875
+* Front horizontal 4 transversal1 (solded to SS mambrane)
+RPP BFH4t1     -570.2 570.2 68.6 91.4 -510.9875 -509.025
+* Front horizontal 4 transversal 2
+RPP BFH4t2     -570.2 570.2 68.6 91.4 -570.2 -568.2375
+RPP BFH5       -570.2 570.2 238.3 241.7 -568.2375 -510.9875
+* Front horizontal 5 transversal1 (solded to SS mambrane)
+RPP BFH5t1     -570.2 570.2 228.6 251.4 -510.9875 -509.025
+* Front horizontal 5 transversal1 2
+RPP BFH5t2     -570.2 570.2 228.6 251.4 -570.02 -568.2375
+RPP BFH6       -570.2 570.2 398.3 401.7 -568.2375 -510.9875
+* Front horizontal 6 transversal1 (solded to SS mambrane)
+RPP BFH6t1     -570.2 570.2 388.6 411.4 -510.9875 -509.025
+* Front horizontal 6 transversal 2
+RPP BFH6t2     -570.2 570.2 388.6 411.4 -570.2 -568.2375
+* Right Vertical 1
+RPP BRIV1      -568.2375 -509.5425 -535. 535. -401.7 -398.3
+* Right Vertical 1
+RPP BRIV1t1    -509.5425 -507.58 -535. 535. -411.4 -388.6
+* Right Vertical 1
+RPP BRIV1t2    -570.2 -568.2375 -535. 535. -411.4 -388.6
+* Right Vertical 2
+RPP BRIV2      -568.2375 -509.5425 -535. 535. -241.7 -238.3
+* Right Vertical 2
+RPP BRIV2t1    -509.5425 -507.58 -535. 535. -251.4 -228.6
+* Right Vertical 2
+RPP BRIV2t2    -570.2 -568.2375 -535. 535. -251.4 -228.6
+* Right Vertical 3
+RPP BRIV3      -568.2375 -509.5425 -535. 535. -81.7 -78.3
+* Right Vertical 3
+RPP BRIV3t1    -509.5425 -507.58 -535. 535. -91.4 -68.6
+* Right Vertical 3
+RPP BRIV3t2    -570.2 -568.2375 -535. 535. -91.4 -68.6
+* Right Vertical 4
+RPP BRIV4      -568.2375 -509.5425 -535. 535. 78.3 81.7
+* Right Vertical 4
+RPP BRIV4t1    -509.5425 -507.58 -535. 535. 68.6 91.4
+* Right Vertical 4
+RPP BRIV4t2    -570.2 -568.2375 -535. 535. 68.6 91.4
+* Right Vertical 5
+RPP BRIV5      -568.2375 -509.5425 -535. 535. 238.3 241.7
+* Right Vertical 5
+RPP BRIV5t1    -509.5425 -507.58 -535. 535. 228.6 251.4
+* Right Vertical 5
+RPP BRIV5t2    -570.2 -568.2375 -535. 535. 228.6 251.4
+* Right Vertical 6
+RPP BRIV6      -568.2375 -509.5425 -535. 535. 398.3 401.7
+* Right Vertical 6
+RPP BRIV6t1    -509.5425 -507.58 -535. 535. 388.6 411.4
+* Right Vertical 6
+RPP BRIV6t2    -570.2 -568.2375 -535. 535. 388.6 411.4
+RPP BLEH1      509.5425 568.2375 -401.7 -398.3 -508.4 508.4
+RPP BLEH1t1    507.58 509.5425 -411.4 -388.6 -508.4 508.4
+RPP BLEH1t2    568.2375 570.2 -411.4 -388.6 -508.4 508.4
+RPP BLEH2      509.5425 568.2375 -241.7 -238.3 -508.4 508.4
+RPP BLEH2t1    507.58 509.5425 -251.4 -228.6 -508.4 508.4
+RPP BLEH2t2    568.2375 570.2 -251.4 -228.6 -508.4 508.4
+RPP BLEH3      509.5425 568.2375 -81.7 -78.3 -508.4 508.4
+RPP BLEH3t1    507.58 509.5425 -91.4 -68.6 -508.4 508.4
+RPP BLEH3t2    568.2375 570.2 -91.4 -68.6 -508.4 508.4
+RPP BLEH4      509.5425 568.2375 78.3 81.7 -508.4 508.4
+RPP BLEH4t1    507.58 509.5425 68.6 91.4 -508.4 508.4
+RPP BLEH4t2    568.2375 570.2 68.6 91.4 -508.4 508.4
+RPP BLEH5      509.5425 568.2375 238.3 241.7 -508.4 508.4
+RPP BLEH5t1    507.58 509.5425 228.6 251.4 -508.4 508.4
+RPP BLEH5t2    568.2375 570.2 228.6 251.4 -508.4 508.4
+RPP BLEH6      509.5425 568.2375 398.3 401.7 -508.4 508.4
+RPP BLEH6t1    507.58 509.5425 388.6 411.4 -508.4 508.4
+RPP BLEH6t2    568.2375 570.2 388.6 411.4 -508.4 508.4
+RPP BRIH1      -568.2375 -509.5425 -401.7 -398.3 -508.4 508.4
+RPP BRIH1t1    -509.5425 -507.58 -411.4 -388.6 -508.4 508.4
+RPP BRIH1t2    -570.2 -568.2375 -411.4 -388.6 -508.4 508.4
+RPP BRIH2      -568.2375 -509.5425 -241.7 -238.3 -508.4 508.4
+RPP BRIH2t1    -509.5425 -507.58 -251.4 -228.6 -508.4 508.4
+RPP BRIH2t2    -570.2 -568.2375 -252.1 -229.3 -508.4 508.4
+RPP BRIH3      -568.2375 -509.5425 -81.7 -78.3 -508.4 508.4
+RPP BRIH3t2    -570.2 -568.2375 -91.4 -68.6 -508.4 508.4
+RPP BRIH3t1    -509.5425 -507.58 -91.4 -68.6 -508.4 508.4
+RPP BRIH4      -568.2375 -509.5425 78.3 81.7 -508.4 508.4
+RPP BRIH4t1    -509.5425 -507.58 68.6 91.4 -508.4 508.4
+RPP BRIH4t2    -570.2 -568.2375 68.6 91.4 -508.4 508.4
+RPP BRIH5      -568.2375 -509.5425 238.3 241.7 -508.4 508.4
+RPP BRIH5t1    -509.5425 -507.58 228.6 251.4 -508.4 508.4
+RPP BRIH5t2    -570.2 -568.2375 228.6 251.4 -508.4 508.4
+RPP BRIH6      -568.2375 -509.5425 398.3 401.7 -508.4 508.4
+RPP BRIH6t1    -509.5425 -507.58 388.6 411.4 -508.4 508.4
+RPP BRIH6t2    -570.2 -568.2375 388.6 411.4 -508.4 508.4
+* Left Vertical 1
+RPP BLEV1      509.5425 568.2375 -535. 535. -401.7 -398.3
+RPP BLEV1t1    507.58 509.5425 -535. 535. -411.4 -388.6
+RPP BLEV1t2    568.2375 570.2 -535. 535. -411.4 -388.6
+* Leftt Vertical 2
+RPP BLEV2      509.5425 568.2375 -535. 535. -241.7 -238.3
+* Leftt Vertical 2 transversal 1 (solded to SS mambrane)
+RPP BLEV2t1    507.58 509.5425 -535. 535. -251.4 -228.6
+* Leftt Vertical 2 transversal 2 (distant)
+RPP BLEV2t2    568.2375 570.2 -535. 535. -251.4 -228.6
+* Leftt Vertical 3
+RPP BLEV3      509.5425 568.2375 -535. 535. -81.7 -78.3
+* Leftt Vertical 3 tranversal1 (solded to SS mambrane)
+RPP BLEV3t1    507.58 509.5425 -535. 535. -91.4 -68.6
+* Leftt Vertical 3 transversal2
+RPP BLEV3t2    568.2375 570.2 -535. 535. -91.4 -68.6
+* Left Vertical 4
+RPP BLEV4      509.5425 568.2375 -535. 535. 78.3 81.7
+* Left Vertical 4 transversal 1 (solded to SS mambrane)
+RPP BLEV4t1    507.58 509.5425 -535. 535. 68.6 91.4
+* Left Vertical 4 transversal 2
+RPP BLEV4t2    568.2375 570.2 -535. 535. 68.6 91.4
+* Left Vertical 5
+RPP BLEV5      509.5425 568.2375 -535. 535. 238.3 241.7
+* Left Vertical 5 transversal 1 (solded to SS mambrane)
+RPP BLEV5t1    507.58 509.5425 -535. 535. 228.6 251.4
+* Left Vertical 5 transersal 2
+RPP BLEV5t2    568.2375 570.2 -535. 535. 228.6 251.4
+* Left Vertical 6
+RPP BLEV6      509.5425 568.2375 -535. 535. 398.3 401.7
+* Left Vertical 6 transversal 1 (solded to SS mambrane)
+RPP BLEV6t1    507.58 509.5425 -535. 535. 388.6 411.4
+* Left Vertical 6 transversal 2 (solded to SS mambrane)
+RPP BLEV6t2    568.2375 570.2 -535. 535. 388.6 411.4
+RPP BFH7       -570.2 570.2 -400.9 -399.1 -567.4 -511.2
+RPP BFLL1t1    -411.4 -388.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL1t2    -411.4 -388.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL2t1    -251.4 -228.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL2t2    -251.4 -228.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL3t1    -91.4 -68.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL3t2    -91.4 -68.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL4t1    68.6 91.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL4t2    68.6 91.4 -570.5 -568.5375 -570.2 570.
+RPP BFLL5t1    228.6 251.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL6t1    388.6 411.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL6t2    388.6 411.4 -570.5 -568.5375 -570.2 570.2
+RPP BFLL5t2    228.6 251.4 -570.5 -568.5375 -570.2 570.2
+RPP BFLL1      -401.7 -398.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL2      -241.7 -238.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL3      -81.97 -78.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL4      78.3 81.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL5      238.3 241.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL6      398.3 401.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLTr1     -508.4 508.4 -568.5375 -509.5425 398.1 401.9
+RPP BFLTr1t1   -508.4 508.4 -509.5425 -507.58 388.6 411.4
+RPP BFLTr2t1   -508.4 508.4 -509.5425 -507.58 228.6 251.4
+RPP BFLTr3t1   -508.4 508.4 -509.5425 -507.58 68.6 91.4
+RPP BFLTr4t1   -508.4 508.4 -509.5425 -507.58 -91.4 -68.6
+RPP BFLTr5t1   -508.4 508.4 -509.5425 -507.58 -251.4 -228.6
+RPP BFLTr6t1   -508.4 508.4 -509.5425 -507.58 -411.4 -388.6
+RPP BFLTr6t2   -570.2 570.2 -570.5 -568.5375 -411.4 -388.6
+RPP BFLTr5t2   -570.2 570.2 -570.5 -568.5375 -251.4 -228.6
+RPP BFLTr4t2   -570.2 570.2 -570.5 -568.5375 -91.4 -68.6
+RPP BFLTr3t2   -570.2 570.2 -570.5 -568.5375 68.6 91.4
+RPP BFLTr2t2   -570.2 570.2 -570.5 -568.5375 228.6 251.4
+RPP BFLTr1t2   -570.2 570.2 -570.5 -568.5375 388.6 411.4
+RPP BCETr1     -508.4 508.4 509.5425 568.5375 398.3 401.7
+RPP BFLTr2     -508.4 508.4 -568.5375 -509.5425 238.3 241.7
+RPP BFLTr3     -508.4 508.4 -568.5375 -509.5425 78.3 81.7
+RPP BFLTr4     -508.4 508.4 -568.5375 -509.5425 -81.7 -78.3
+RPP BFLTr5     -508.4 508.4 -568.5375 -509.5425 -241.7 -238.3
+RPP BFLTr6     -508.4 508.4 -568.5375 -509.5425 -401.7 -398.3
+RPP BCTr1t1    -570.2 570.2 568.5375 570.5 388.6 411.4
+RPP BCTr1t2    -508.4 508.4 507.58 509.5425 388.6 411.4
+RPP BCTr2t2    -508.4 508.4 507.58 509.5425 228.6 251.4
+RPP BCTr3t2    -508.4 508.4 507.58 509.5425 68.6 91.4
+RPP BCTr4t2    -508.4 508.4 507.58 509.5425 -91.4 -68.6
+RPP BCTr5t2    -508.4 508.4 507.58 509.5425 -251.4 -228.6
+RPP BCTr6t2    -508.4 508.4 507.58 509.5425 -411.4 -388.6
+RPP BCTr2t1    -570.2 570.2 568.5375 570.5 228.6 251.4
+RPP BCTr3t1    -570.2 570.2 568.5375 570.5 68.6 91.4
+RPP BCTr4t1    -570.2 570.2 568.5375 570.5 -91.4 -68.6
+RPP BCTr5t1    -570.2 570.2 568.5375 570.5 -251.4 -228.6
+RPP BCTr6t1    -570.2 570.2 568.5375 570.5 -411.4 -388.6
+RPP BCETr2     -508.4 508.4 509.5425 568.5375 238.3 241.7
+RPP BCETr3     -508.4 508.4 509.5425 568.5375 78.3 81.7
+RPP BCETr4     -508.4 508.4 509.5425 568.5375 -81.7 -78.3
+RPP BCETr5     -508.4 508.4 509.5425 568.5375 -241.7 -238.3
+RPP BCETr6     -508.4 508.4 509.5425 568.5375 -401.7 -398.3
+RPP BCEL1      -401.7 -398.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL1t2    -411.4 -388.6 507.58 509.5425 -508.4 508.4
+RPP BCEL2t2    -251.4 -228.6 507.58 509.5425 -508.4 508.4
+RPP BCEL3t2    -91.4 -68.6 507.58 509.5425 -508.4 508.4
+RPP BCEL4t2    68.6 91.4 507.58 509.5425 -508.4 508.4
+RPP BCEL5t2    228.6 251.4 507.58 509.5425 -508.4 508.4
+RPP BCEL6t2    388.6 411.4 507.58 509.5425 -508.4 508.4
+RPP BCEL1t1    -411.4 -388.6 568.5375 570.5 -570.2 570.2
+RPP BCEL2t1    -251.4 -228.6 568.5375 570.5 -570.2 570.2
+RPP BCEL3t1    -91.4 -68.6 568.5375 570.5 -570.2 570.2
+RPP BCEL4t1    68.6 91.4 568.5375 570.5 -570.2 570.2
+RPP BCEL5t1    228.6 251.4 568.5375 570.5 -570.2 570.2
+RPP BCEL6t1    388.6 411.4 568.5375 570.5 -570.2 570.2
+RPP BCEL2      -241.7 -238.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL3      -81.7 -78.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL4      78.3 81.7 509.5425 568.5375 -508.4 508.4
+RPP BCEL5      238.3 241.7 509.5425 568.5375 -508.4 508.4
+RPP BCEL6      398.3 401.7 509.5425 568.5375 -508.4 508.4
+RCC BPipe1     154.414 312.6217 -1440.4 -39.5716 -174.5466 870. 12.4428
+RCC BPipe2     154.414 312.6217 -1440.4 -182.4791 -174.5466 870. 12.4428
+ZCC ADDRCC1    0.0 0.0 12.428
+* polar -11.342
+QUA ADDRCC2    1. .9613229093904 .0386770906096 0.0 0.0 .38564840604662 0.0 0.0
+              0.0 -154.455184
+* polar -11.342 and amimuthal 2.604
+QUA ADDRCC3    .9980157017614 .9613229093904 .0406613888482 -.017521059645
+              .0872608484104 .38525018566539 0.0 0.0 0.0 -154.455184
+* polar -11.342 and amimuthal 2.604, translation
+QUA Pipe1n     .9980157017614 .9613229093904 .0406613888482 -.017521059645
+              .0872608484104 .38525018566539 -177.0646558109 -43.51799006583
+              -16.79080017612 8227.4545078499
+* polar -11.342, azimuthal 11.844
+QUA RCCb2      .95950271365765 .9613229093904 .07917437695195 -.0791534513033
+              .38621723901426 .377437974021 0.0 0.0 0.0 -154.455184
+* polar -11.342, azimuthal 11.844, translation
+QUA Pipe2n     .95950271365765 .9613229093904 .07917437695195 -.0791534513033
+              .38621723901426 0.377437974021 284.73072150876 -45.1677091204
+              50.454669253507 21259.889657895
+XYP BPL1       -2000.
+XYP BPL2       2000.
+RPP BEXTn      -1000. 1000. -1000. 1000. -1440.4 2000.
+* new_Outer_LAr_buffer_int_wall
+RCC OLAr_IW    0.0 0.0 -280. 0.0 0.0 560. 275.
+* new_Acrylic-Gd_ext
+RCC ACR_GdE    0.0 0.0 -240. 0.0 0.0 480. 235.
+* Cuext_RCC
+RCC CUEXT      0.0 0.0 -263.911 0.0 0.0 461.822 237.49
+* Veto_ext_RCC
+RCC RPPVETO    0.0 0.0 -262.15 0.0 0.0 458.3 235.73
+* TpC_wall_external
+RCC TPCGDA     0.0 0.0 -237.345 0.0 0.0 408.69 194.73
+* Sislab1
+RCC Sislab1    0.0 0.0 -222.345 0.0 0.0 15. 179.73
+* gas pocket
+RCC Sislab3    0.0 0.0 140.655 0.0 0.0 0.7 179.73
+* Sislab2
+RCC Sislab2    0.0 0.0 141.355 0.0 0.0 15. 179.73
+* new_TPC_wall_cylinder_int
+RCC IntTPC     0.0 0.0 -207.345 0.0 0.0 348. 179.73
+*
+* ---
+*
+END
+world        5 +BlckBody -Vacuum
+void         5 +Vacuum   -Rock_tc -Rock_bc |  +Vacuum +Cut -Rock_bc
+*
+outside      5 +Rock_tc  -Rock_tf -Cut    | +Rock_bc  -Rock_bf
+rock         5 +Rock_tf  -Hall_t -Cut    | +Rock_bf  -Hall_b
+hall         5 +Hall_b -BexCRIO   | +Hall_t -Cut -BexCRIO
+* Target
+Rint_ins     5 + Bint_ins - MDEXT
+* Target
+Rext_SS      5 +Bext_SS -Bext_ins
+* Wood layer (1 external) 12 mm
+RW1          5 +Bext_ins -BisW1
+RPOLY1       5 +BisW1 -BisPol1
+RPOLY2       5 +BisW3 -BisPol2
+RW2          5 +BisPol1 -BisPol3
+RW7          5 +BisPol3 -BisPol4
+RW5          5 +BisPol4 -Secm
+SecMem       5 +Secm -BisW2
+RW3          5 +BisW2 -BisW3
+RPolyT1      5 +RFPol2 -Bint_ins
+RW4          5 +BisPol2 -BisW4 -RFPol2
+RSSint       5 +BisW4 -RFPol2 -Bint_ins
+RFRV6        5 +BFRV6
+               | +BFV6t1
+               | +BFV6t2
+RFRV5        5 +BFRV5 |
+               +BFV5t1 |
+               +BFV5t2
+RFRV4        5 +BFRV4 |
+               +BFV4t1 |
+               +BFV4t2
+RFRV3        5 +BFRV3 |
+               +BFV3t1 |
+               +BFV3t2
+* Target
+Rext_OUT     5 -Bext_SS +BexCRIO -BFRV6 -BFRV5 -BFRV4 -BFRV3 -BFRV2 -BFRV1 -BFV1t1 -BFV1t2 -BFV2t1 -BFV2t2
+               -BFV3t1 -BFV3t2 -BFV4t1 -BFV4t2 -BFV5t1 -BFV5t2 -BFV6t1 -BFV6t2 -BBCV6 -BBCV5 -BBCV4 -BBCV3 -BBCV2
+               -BBCV1 -BCV1t1 -BCV1t2 -BCV2t1 -BCV2t2 -BCV3t1 -BCV3t2 -BCV4t1 -BCV4t2 -BCV5t1 -BCV5t2 -BCV6t1
+               -BCV6t2 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               -BLEV1t1 -BLEV1t2 -BLEV2t1 -BLEV2t2 -BLEV3t1 -BLEV3t2 -BLEV4t1 -BLEV4t2 -BLEV5t1 -BLEV5t2 -BLEV6t1
+               -BLEV6t2 -BRIV1t1 -BRIV1t2 -BRIV2t1 -BRIV2t2 -BRIV3t1 -BRIV3t2 -BRIV4t1 -BRIV4t2 -BRIV5t1 -BRIV5t2
+               -BRIV6t1 -BRIV6t2 -BFH1 -BFH2 -BFH3 -BFH4 -BFH5 -BFH6 -BBCH1 -BBCH2 -BBCH3 -BBCH4 -BBCH5 -BBCH6
+               -BFH1t1 -BFH1t2 -BFH2t1 -BFH3t1 -BFH2t2 -BFH3t2 -BFH4t1 -BFH4t2 -BFH5t1 -BFH5t2 -BFH6t1 -BFH6t2
+               -BCH1t1 -BCH1t2 -BCH2t1 -BCH2t2 -BCH3t1 -BCH3t2 -BCH4t1 -BCH4t2 -BCH5t1 -BCH5t2 -BCH6t1 -BCH6t2
+               -BRIH1 -BRIH2 -BRIH3 -BRIH4 -BRIH5 -BRIH6 -BLEH1 -BLEH2 -BLEH3 -BLEH4 -BLEH5 -BLEH6 -BRIH1t1
+               -BRIH1t2 -BRIH2t1 -BRIH2t2 -BRIH3t1 -BRIH3t2 -BRIH4t1 -BRIH4t2 -BRIH5t1 -BRIH5t2 -BRIH6t1 -BRIH6t2
+               -BLEH1t1 -BLEH1t2 -BLEH2t1 -BLEH2t2 -BLEH3t1 -BLEH3t2 -BLEH4t1 -BLEH4t2 -BLEH5t1 -BLEH5t2 -BLEH6t1
+               -BLEH6t2 -BCETr1 -BCETr2 -BCETr3 -BCETr5 -BCETr4 -BCETr6 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1
+               -BCTr5t1 -BCTr6t1 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2 -BCEL1 -BCEL2 -BCEL3
+               -BCEL4 -BCEL5 -BCEL6 -BCEL1t1 -BCEL2t1 -BCEL3t1 -BCEL4t1 -BCEL5t1 -BCEL6t1 -BCEL1t2 -BCEL2t2
+               -BCEL3t2 -BCEL4t2 -BCEL5t2 -BCEL6t2 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr5 -BFLTr4 -BFLTr6 -BFLTr1t1
+               -BFLTr1t2 -BFLTr2t1 -BFLTr2t2 -BFLTr3t1 -BFLTr3t2 -BFLTr4t1 -BFLTr4t2 -BFLTr5t1 -BFLTr5t2
+               -BFLTr6t1 -BFLTr6t2 -BFLL1 -BFLL2 -BFLL3 -BFLL4 -BFLL5 -BFLL6 -BFLL1t1 -BFLL1t2 -BFLL2t1 -BFLL2t2
+               -BFLL3t1 -BFLL3t2 -BFLL4t1 -BFLL4t2 -BFLL5t1 -BFLL5t2 -BFLL6t1 -BFLL6t2
+RFRV2        5 +BFRV2 |
+               +BFV2t1 |
+               +BFV2t2
+RFRV1        5 +BFRV1|
+               +BFV1t1 |
+               +BFV1t2
+RBBV6        5 +BBCV6 |
+               +BCV6t1 |
+               +BCV6t2
+RBBV5        5 +BBCV5
+               | +BCV5t1
+               | +BCV5t2
+RBBV4        5 +BBCV4 |
+               +BCV4t1 |
+               +BCV4t2
+RBBV3        5 +BBCV3
+               | +BCV3t1
+               | +BCV3t2
+RBBV2        5 +BBCV2 |
+               +BCV2t1 |
+               +BCV2t2
+RBBV1        5 +BBCV1 |
+               +BCV1t1 |
+               +BCV1t2
+RRIV1        5 +BRIV1
+               | +BRIV1t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV1t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV2        5 +BRIV2
+               | +BRIV2t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV2t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV3        5 +BRIV3
+               | +BRIV3t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV3t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV4        5 +BRIV4
+               | +BRIV4t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH5t1 -BRIH4t1 -BRIH6t1
+               | +BRIV4t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV5        5 +BRIV5
+               | +BRIV5t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV5t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV6        5 +BRIV6
+               | +BRIV6t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV6t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIH1        5 +BRIH1 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH1t1
+               | +BRIH1t2
+RRIH2        5 +BRIH2 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH2t1
+               | +BRIH2t2
+RRIH3        5 +BRIH3 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH3t1
+               | +BRIH3t2
+RRIH4        5 +BRIH4 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH4t1
+               | +BRIH4t2
+RRIH5        5 +BRIH5 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH5t1
+               | +BRIH5t2
+RRIH6        5 +BRIH6 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH6t1
+               | +BRIH6t2
+RLEH1        5 +BLEH1 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH1t2
+               | +BLEH1t1
+RLEH2        5 +BLEH2 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH2t2
+               | +BLEH2t1
+RLEH3        5 +BLEH3 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH3t2
+               | +BLEH3t1
+RLEH4        5 +BLEH4 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH4t2
+               | +BLEH4t1
+RLEH5        5 +BLEH5 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH5t2
+               | +BLEH5t1
+RLEH6        5 +BLEH6 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH6t2
+               | +BLEH6t1
+RLEV1        5 +BLEV1
+               | +BLEV1t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV1t2 -BLEH2t2 -BLEH1t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV2        5 +BLEV2
+               | +BLEV2t1 -BLEH3t1 -BLEH1t1 -BLEH2t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV2t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV3        5 +BLEV3
+               | +BLEV3t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV3t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV4        5 +BLEV4
+               | +BLEV4t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV4t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV5        5 +BLEV5
+               | +BLEV5t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV5t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV6        5 +BLEV6
+               | +BLEV6t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV6t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RFH1         5 +BFH1 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH1t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1|
+               +BFH1t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH2         5 +BFH2 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH2t1 -BFV2t1 -BFV1t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH2t2 -BFV1t2 -BFV2t2  -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH3         5 +BFH3 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH3t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH3t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH4         5 +BFH4 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH4t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH4t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH6         5 +BFH6 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH6t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH6t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH5         5 +BFH5 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH5t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH5t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RBCH1        5 +BBCH1 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH1t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH1t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH2        5 +BBCH2 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6
+               | +BCH2t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1
+               | +BCH2t2 -BCV2t2 -BCV1t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH5        5 +BBCH5 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH5t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH5t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH3        5 +BBCH3 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6
+               | +BCH3t1 -BCV1t1 -BCV2t1 -BCV4t1 -BCV3t1 -BCV5t1 -BCV6t1
+               | +BCH3t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH6        5 +BBCH6 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH6t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1|
+               +BCH6t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH4        5 +BBCH4 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH4t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH4t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RCETR1       5 +BCETr1
+               | +BCTr1t1
+               | +BCTr1t2
+RCETR2       5 +BCETr2
+               | +BCTr2t1
+               | +BCTr2t2
+RCETR3       5 +BCETr3
+               | +BCTr3t1
+               | +BCTr3t2
+RCETR4       5 +BCETr4
+               | +BCTr4t1
+               | +BCTr4t2 -BCEL6t2 -BCEL5t2 -BCEL4t2
+RCETR5       5 +BCETr5
+               | +BCTr5t1
+               | +BCTr5t2
+RCETR6       5 +BCETr6
+               | +BCTr6t1
+               | +BCTr6t2
+RCEL1        5 +BCEL1 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL1t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL1t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL3        5 +BCEL3 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL3t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL3t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL2        5 +BCEL2 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL2t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL2t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL4        5 +BCEL4 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL4t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL4t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RCEL6        5 +BCEL6 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL6t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL6t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RFLTr3       5 +BFLTr3 |
+               +BFLTr3t1 |
+               +BFLTr3t2
+RCEL5        5 +BCEL5 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL5t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL5t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RFLTr1       5 +BFLTr1 |
+               +BFLTr1t1 |
+               +BFLTr1t2
+RFLTr4       5 +BFLTr4 |
+               +BFLTr4t1 |
+               +BFLTr4t2
+RFLTr2       5 +BFLTr2 |
+               +BFLTr2t1 |
+               +BFLTr2t2
+RFLTr5       5 +BFLTr5 |
+               +BFLTr5t1 |
+               +BFLTr5t2
+RFLTr6       5 +BFLTr6 |
+               +BFLTr6t1 |
+               +BFLTr6t2
+RFLL1        5 +BFLL1 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL1t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL1t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL2        5 +BFLL2 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL2t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL2t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL3        5 +BFLL3 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL3t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL3t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL4        5 +BFLL4 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL4t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL4t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL5        5 +BFLL5 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL5t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL5t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL6        5 +BFLL6 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL6t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL6t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+CuWall       5 +CUEXT-RPPVETO
+LAr_Bath     5 +MDEXT -CUEXT
+Inner_Ar     5 +RPPVETO  -TPCGDA
+TPCwall      5 +TPCGDA -IntTPC -Sislab1 -Sislab3 -Sislab2
+Sislabd      5 +Sislab1
+SensVol      5 +IntTPC -Sislab3
+* Gas pocket
+Sislabg      5 +Sislab3
+Sislabu      5 +Sislab2 -Sislab3
+*
+*
+*
+*
+END
+GEOEND
+*         ---------|---------|---------|---------|---------|---------|
+MATERIAL                        0.001205                              STDAIR
+COMPOUND   -0.000124    CARBON -0.755267  NITROGEN -0.231781    OXYGENSTDAIR
+COMPOUND   -0.012827     ARGON                                        STDAIR
+MATERIAL         19.   39.0983      .862                              POTASSIU
+MATERIAL                            2.71                              GRSasso
+COMPOUND      -30.29   CALCIUM    -11.88    CARBON    -47.91    OXYGENGRSasso
+COMPOUND       -5.58  MAGNESIU     -1.27   SILICON     -1.03  ALUMINUMGRSasso
+COMPOUND       -1.03  POTASSIU                                        GRSasso
+MATERIAL                              1.                              WATER
+MATERIAL         29.                8.96                              CU87
+MATERIAL         16.                2.07                              SULFUR
+MATERIAL                            1.19                              ACRYLIC
+COMPOUND       33.34    CARBON     53.34  HYDROGEN     13.32    OXYGENACRYLIC
+COMPOUND       66.67  HYDROGEN     33.33    OXYGEN                    WATER
+* Composite density for ACRYGD~1.26 ?
+MATERIAL                            1.26                              ACRYGD
+MATERIAL         64.                 7.9                              GADOLINI
+* Gadolinium Sulphate density?
+MATERIAL                             7.9                              GDS
+COMPOUND       11.76  GADOLINI     17.65    SULFUR     70.59    OXYGENGDS
+COMPOUND        -99.   ACRYLIC       -1.  GADOLINI                    ACRYGD
+*         ---------|---------|---------|---------|---------|---------|
+MATERIAL         24.                7.18                              CHROMIUM
+MATERIAL         14.                2.33                              SILICO87
+* Deactivated on 12/7/21
+MATERIAL                           1.026                              SCINT
+* Deactivated on 12/7/21
+COMPOUND         32.  CARBON87       37.    BoundH        2.    NewBORSCINT
+MATERIAL         42.               10.22                              MOLYBDEN
+MATERIAL         25.                7.21                              MANGANES
+MATERIAL         27.                 8.9                              COBALT
+MATERIAL         15.                1.82                              PHOSPHO
+*MATERIAL         29.                8.96                              CU87
+* Polyurethane foam isolation - 0.088 kg/m3
+MATERIAL                           0.088                              Polyure
+COMPOUND      -42.86    CARBON    -32.65    OXYGEN    -14.28  NITROGENPolyure
+COMPOUND      -10.21  HYDROGEN                                        Polyure
+* Plywood isolation - 650 kg/m3
+MATERIAL                            0.65                              Plywood
+COMPOUND       -49.6    CARBON      -44.    OXYGEN      -6.3  HYDROGENPlywood
+COMPOUND        -0.1  NITROGEN                                        Plywood
+* polyurethane foam - 40 kg/m3 for roof
+MATERIAL                            0.04                              Polyure2
+COMPOUND      -42.86    CARBON    -32.65    OXYGEN    -14.28  NITROGENPolyure2
+COMPOUND      -10.21  HYDROGEN                                        Polyure2
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL          5.                2.37                              BORON
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL         18.    39.948     1.400                              ARGON87
+* Though Ar-40, it is liquid, look at the density
+MATERIAL         18.               1.400                              ARGON-40
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL         18.    39.948     1.400                              ARGON87B
+MATERIAL          5.                2.37                              BOR1087
+MATERIAL          5.       11.      2.37                              BOR1187
+MATERIAL                   10.      2.37                              NewBOR
+COMPOUND        -19.   BOR1087      -81.   BOR1187                    NewBOR
+MATERIAL          6.     12.01      2.25                              CARBON87
+MATERIAL         25.    54.938      7.43                              MANGAN87
+MATERIAL         24.       52.      7.19                              CHROMI87
+MATERIAL         28.     58.69       8.9                              NICKEL87
+MATERIAL         15.    30.974      1.82                              PHOSPH87
+MATERIAL         14.    28.086      2.33                              SILICO87
+MATERIAL         26.     55.85      7.87                              IRON87
+MATERIAL         24.                7.18                              CHROMIUM
+MATERIAL         42.               10.22                              MOLYBDEN
+MATERIAL         25.                7.21                              MANGANES
+MATERIAL         27.                 8.9                              COBALT
+MATERIAL         15.                1.82                              PHOSPHO
+MATERIAL         16.                2.07                              SULFUR
+MATERIAL                            2.20                              Teflon
+COMPOUND          1.    CARBON        2.  FLUORINE                    Teflon
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+* Polypyromellitimide Polyimide, Kapton
+* Chemical       O = C   H-C   C = O
+* Formula           / \  // \ / \      H-C - C-H        H-C - C-H
+*                  /   \C    C   \    //     \\        //     \\
+*            ---- N     |    ||   N - C        C - O - C        C ----
+*                  \   /C    C   /     \     /          \     /
+*  C  H  N O        \ /  \\ / \ /      H-C = C-H        H-C = C-H
+*   22 10 2 5    O = C   H-C    C = O
+MATERIAL                            1.43                              KAPTON
+COMPOUND         10.  HYDROGEN       22.  CARBON87        2.  NITROGENKAPTON
+COMPOUND          5.    OXYGEN                                        KAPTON
+MATERIAL         35.     79.91      4.10                              BROMINE
+MATERIAL                             1.8                              FR4
+COMPOUND     -0.7088  HYDROGEN   -8.4464    CARBON   -6.2434   BROMINEFR4
+COMPOUND    -20.8813   SILICON  -11.8249   CALCIUM   -6.1296  ALUMINUMFR4
+COMPOUND     -2.5691     BORON    -.9977  MAGNESIU  -42.1988    OXYGENFR4
+*
+MATERIAL         18.    39.948     0.006                              ARGGAS
+* aisi304 is cold steel
+MATERIAL                            8.19                              AISI304
+COMPOUND     -0.0008  CARBON87     -0.02  MANGAN87     -0.19  CHROMI87AISI304
+COMPOUND       -0.10  NICKEL87  -0.00045  PHOSPH87     -0.01  SILICO87AISI304
+COMPOUND    -0.67875    IRON87                                        AISI304
+* nomex : 2 times C6H5 +2O, 2C, 2N, 2H -->C8H7N2H2
+MATERIAL                           0.048                              NOMEX
+COMPOUND          2.  HYDROGEN        8.    CARBON        2.  NITROGENNOMEX
+COMPOUND          2.    OXYGEN                                        NOMEX
+* Basotect melamine foam  formaldehyde-melamine-sodium bisulfite copolymer.
+* melamine is C3N6H6
+* formaldeide is CH2O
+* sodium bisulfite NaHSO3
+* se tutto fosse allo stesso modo, avremmo un totale di
+* C4N6H9O4NaS
+MATERIAL                           0.009                              BASOTECT
+COMPOUND          9.  HYDROGEN        4.  CARBON87        6.  NITROGENBASOTECT
+COMPOUND          4.    OXYGEN        1.    SODIUM        1.    SULFURBASOTECT
+* Polyethylene Terephthalate Mylar, Melinex
+* Chemical            H-C = C-H            H   H
+* Formula             /       \            |   |
+*       ---- O - C - C         C - C - O - C - C -------
+*                ||   \\     //    ||      |   |
+*  C  H 0        O    H-C - C-H    O       H   H
+*   10 8 4
+MATERIAL                           1.397                              Mylar
+COMPOUND          8.  HYDROGEN       10.    CARBON        4.    OXYGENMylar
+* Epoxy (molded)
+* Chemical           H-C - C-H     CH3  H-C - C-H        H   H   H
+* Formula             //    \\     |     //    \\        |   |   |
+*          ----- O - C        C -- C -- C        C - O - C - C - C ---
+*  C  H  0            \     /      |     \     /         |   |   |
+*   18 19 3          H-C = C-H     CH3  H-C = C-H        H   O   H
+* Molded epoxy usually has fillers of glass fiber (1.8 - 2.0 g/cm3) or of
+* mineral fiber (1.6 - 2.06 g/cm3).
+MATERIAL                            1.19                              Epoxy
+COMPOUND         19.  HYDROGEN       18.    CARBON        3.    OXYGENEpoxy
+MATERIAL                            2.61                              EGlass
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMEGlass
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONEGlass
+MATERIAL                            1.85                              G10
+COMPOUND        -0.6    EGlass      -0.4     Epoxy                    G10
+MATERIAL                            2.23                              TGlass
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMTGlass
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONTGlass
+MATERIAL                           0.892                              TGlass40
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMTGlass40
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONTGlass40
+MATERIAL         17.            0.003214                              CHLORINE
+MATERIAL          9.            0.001696                              FLUORINE
+* Concrete
+* Concrete has a wide variation in density and composition. The above
+* description is for poured structural concrete with 10% moisture
+* content. Concrete block will have a density of about 2.05 g/cm3.
+* Ranges of concrete composition are : C (8-25%), O (38-60%), Si (8-18%).
+* Concrete composition can be analyzed cheaply by commercial laboratories.
+MATERIAL                            2.34                              Concrete
+COMPOUND         23.    CARBON       40.    OXYGEN       12.   SILICONConcrete
+COMPOUND         12.   CALCIUM       10.  HYDROGEN        2.  MAGNESIUConcrete
+* S235-steel
+*
+MATERIAL                            7.85                              S235stee
+COMPOUND       -0.05   PHOSPHO     -0.05    SULFUR     -0.05   SILICONS235stee
+COMPOUND       -0.22    CARBON      -1.6  MANGANES    -93.08      IRONS235stee
+* Steel316LN
+* Stainless steel AISI316LN
+MATERIAL                             7.8                              SS316LN
+COMPOUND    -0.67145      IRON    -0.185  CHROMIUM   -0.1125    NICKELSS316LN
+COMPOUND       -0.02  MANGANES     -0.01   SILICON  -0.00045   PHOSPHOSS316LN
+COMPOUND     -0.0003    SULFUR   -0.0003    CARBON                    SS316LN
+* Cast iron
+*
+MATERIAL                             7.2                              Cast_iro
+COMPOUND     -93.565      IRON      -3.1    CARBON       -2.   SILICONCast_iro
+COMPOUND       -0.75  MANGANES      -0.5   PHOSPHO    -0.085    SULFURCast_iro
+MATERIAL                              8.                              SS304L
+COMPOUND    -0.68045      IRON     -0.19  CHROMIUM      -0.1    NICKELSS304L
+COMPOUND       -0.02  MANGANES   -0.0075   SILICON    -0.001  NITROGENSS304L
+COMPOUND     -0.0003    CARBON  -0.00045   PHOSPHO   -0.0003    SULFURSS304L
+* //DEactivating card on 12th july
+MATERIAL          1.           0.0000899                              BoundH
+*  low-mat assignment for all the elements involved
+LOW-MAT      ARGON87       18.       -2.       87.                    ARGON
+* Deactivated on 12/7/21
+LOW-MAT       BoundH        1.       -3.      296.                    HYDROGEN
+* revisit
+LOW-MAT     ARGON-40       18.       -2.       87.                    ARGON
+LOW-MAT     ARGON87B       18.       -2.       87.                    ARGON
+LOW-MAT       ARGGAS       18.       -2.       87.                    ARGON
+* Deactivated on 15/7/21
+LOW-MAT     CARBON87        6.       -2.       87.                    CARBON
+* revisit
+LOW-MAT     CHROMI87       24.       -2.       87.                    CHROMIUM
+* revisit
+LOW-MAT     NICKEL87       28.       -2.       87.                    NICKEL
+* revisit
+LOW-MAT       IRON87       26.       -2.       87.                    IRON
+* revisit
+LOW-MAT     MANGAN87       25.       55.       87.                    MANGANES
+* revisit
+LOW-MAT     PHOSPH87       15.       31.       87.                    PHOSPHO
+* revisit
+LOW-MAT     SILICO87       14.       -2.       87.                    SILICON
+LOW-MAT      BOR1087        5.       10.       87.                    BORON-10
+LOW-MAT      BOR1187        5.       11.       87.                    BORON-11
+LOW-MAT     GADOLINI       64.       -2.       87.                    GADOLINI
+LOW-MAT     NITROGEN        7.       -2.       87.                    NITROGEN
+* included sulfur , to address GDS
+LOW-MAT       SULFUR       16.       -2.       87.                    SULFUR
+LOW-MAT     HYDROGEN        1.       11.      296.                    HYDROG-1
+LOW-MAT     MAGNESIU       12.       -2.      296.                    MAGNESIU
+LOW-MAT      CALCIUM       20.       -2.      296.                    CALCIUM
+LOW-MAT     POTASSIU       19.       -2.      296.                    POTASSIU
+LOW-MAT         CU87       29.       -2.       87.                    COPPER
+EMFCUT       -1.E-05    3.E-06        1.    VACUUM  @LASTMAT          PROD-CUT
+* changed neutron thresh to 2-MeV-27/5/22
+PART-THR      0.01   NEUTRON   NEUTRON                 0.0
+DELTARAY      0.0001                        VACUUM  @LASTMAT
+DELTARAY        .001
+*EMFCUT       -5.E-04    1.E-04        1.       AIR       AIR          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22(Teena)
+EMFCUT        -3E-06    3.E-06        1.   ARGON87   ARGON87          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  ARGON-40  ARGON-40          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  ARGON87B  ARGON87B          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.    ARGGAS    ARGGAS          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.       FR4       FR4          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.       G10       G10          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.    SS304L    SS304L          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.      CU87      CU87          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  Concrete  Concrete          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.      IRON      IRON          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  TUNGSTEN  TUNGSTEN          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  ALUMINUM  ALUMINUM          PROD-CUT
+* Changed e+e- and ph. thresh. to 3 keV-27/5/22
+EMFCUT        -3E-06    3.E-06        1.  S235stee  S235stee          PROD-CUT
+* Changed e+e- thrsh. to 3KeV on 27/5/22
+EMFCUT        -3E-06    3.E-06        1.   AISI304   AISI304          PROD-CUT
+DELTARAY        0.01                      Concrete  Concrete          NOPRINT
+DELTARAY        0.01                          CU87      CU87          NOPRINT
+DELTARAY        0.01                      ARGON87B  ARGON87B
+DELTARAY        0.01                        SS304L    SS304L
+DELTARAY        0.01                          IRON      IRON
+*DELTARAY        0.01                      ALUMINUM  ALUMINUM          NOPRINT
+*DELTARAY        0.01                      S235stee  S235stee
+* 3 milliseconds time-cut
+*TIME-CUT    3000000.
+* Added so as to transport neutron of all energies
+*LOW-BIAS        187.                       SensVol   SensVol
+ASSIGNMA      SS304L  Rint_ins
+ASSIGNMA         AIR     world
+ASSIGNMA      SS304L   Rext_SS
+ASSIGNMA         AIR  Rext_OUT
+*ASSIGNMA    POLYETHY
+ASSIGNMA      SS304L     RFRV6
+ASSIGNMA      SS304L     RFRV5
+ASSIGNMA      SS304L     RFRV4
+ASSIGNMA      SS304L     RFRV3
+ASSIGNMA      SS304L     RFRV1
+ASSIGNMA      SS304L     RFRV2
+ASSIGNMA      SS304L     RBBV6
+ASSIGNMA      SS304L     RBBV5
+ASSIGNMA      SS304L     RBBV4
+ASSIGNMA      SS304L     RBBV3
+ASSIGNMA      SS304L     RBBV2
+ASSIGNMA      SS304L     RBBV1
+ASSIGNMA      SS304L     RRIV1
+ASSIGNMA      SS304L     RRIV2
+ASSIGNMA      SS304L     RRIV3
+ASSIGNMA      SS304L     RRIV4
+ASSIGNMA      SS304L     RRIV5
+ASSIGNMA      SS304L     RRIV6
+ASSIGNMA      SS304L     RLEV1
+ASSIGNMA      SS304L     RLEV2
+ASSIGNMA      SS304L     RLEV3
+ASSIGNMA      SS304L     RLEV4
+ASSIGNMA      SS304L     RLEV5
+ASSIGNMA      SS304L     RLEV6
+ASSIGNMA      SS304L      RFH1
+ASSIGNMA      SS304L      RFH2
+ASSIGNMA      SS304L      RFH3
+ASSIGNMA      SS304L      RFH4
+ASSIGNMA      SS304L      RFH5
+ASSIGNMA      SS304L     RBCH1
+ASSIGNMA      SS304L     RBCH3
+ASSIGNMA      SS304L     RBCH4
+ASSIGNMA      SS304L     RBCH5
+ASSIGNMA      SS304L     RBCH6
+ASSIGNMA      SS304L      RFH6
+ASSIGNMA      SS304L     RBCH2
+ASSIGNMA     Plywood       RW1
+ASSIGNMA     Polyure    RPOLY1
+ASSIGNMA      TGlass       RW2
+ASSIGNMA    ALUMINUM       RW7
+ASSIGNMA      TGlass       RW5
+ASSIGNMA     Plywood       RW3
+ASSIGNMA     Plywood    RPOLY2
+ASSIGNMA     Polyure       RW4
+ASSIGNMA    Polyure2   RPolyT1
+*ASSIGNMA    Polyure2   RPolyT2
+ASSIGNMA     Plywood    RSSint
+ASSIGNMA      SS304L     RRIH1
+ASSIGNMA      SS304L     RRIH2
+ASSIGNMA      SS304L     RRIH3
+ASSIGNMA      SS304L     RRIH4
+ASSIGNMA      SS304L     RRIH5
+ASSIGNMA      SS304L     RRIH6
+ASSIGNMA      SS304L     RLEH1
+ASSIGNMA      SS304L     RLEH2
+ASSIGNMA      SS304L     RLEH3
+ASSIGNMA      SS304L     RLEH4
+ASSIGNMA      SS304L     RLEH5
+ASSIGNMA      SS304L     RLEH6
+ASSIGNMA      SS304L    RCETR1
+ASSIGNMA      SS304L    RCETR2
+ASSIGNMA      SS304L    RCETR3
+ASSIGNMA      SS304L    RCETR4
+ASSIGNMA      SS304L    RCETR5
+ASSIGNMA      SS304L    RCETR6
+ASSIGNMA      SS304L     RCEL1
+ASSIGNMA      SS304L     RCEL2
+ASSIGNMA      SS304L     RCEL3
+ASSIGNMA      SS304L     RCEL4
+ASSIGNMA      SS304L     RCEL5
+ASSIGNMA      SS304L     RCEL6
+ASSIGNMA      SS304L    RFLTr1
+ASSIGNMA      SS304L    RFLTr2
+ASSIGNMA      SS304L    RFLTr3
+ASSIGNMA      SS304L    RFLTr4
+ASSIGNMA      SS304L    RFLTr5
+ASSIGNMA      SS304L    RFLTr6
+ASSIGNMA      SS304L     RFLL1
+ASSIGNMA      SS304L     RFLL2
+ASSIGNMA      SS304L     RFLL5
+ASSIGNMA      SS304L     RFLL4
+ASSIGNMA      SS304L     RFLL3
+ASSIGNMA      SS304L     RFLL6
+ASSIGNMA     Polyure    SecMem
+*#if  
+* outer_outer_LArbath
+*ASSIGNMA    ARGON-40  LAr_Bath
+*#endif  
+ASSIGNMA    BLCKHOLE     world
+ASSIGNMA      VACUUM      void
+ASSIGNMA     GRSasso      rock
+ASSIGNMA    BLCKHOLE   outside
+ASSIGNMA      STDAIR      hall
+*ASSIGNMA        CU87    Vessel
+* LAr_bath_SAGAR
+ASSIGNMA     ARGON87  LAr_Bath
+* Outer_LAr_Buffer_SAGAR
+*ASSIGNMA    ARGON87B  OuterLAr
+* ACRYLIC for now but ACRYLIC +Gd_SAGAR
+*ASSIGNMA      ACRYGD    ACR_Gd
+ASSIGNMA    TITANIUM    CuWall
+* Inner_Ar_assigned_Ar-40_SAGAR
+ASSIGNMA     ARGON87  Inner_Ar
+* ACRYLIC_FOR_TPC_WALL_SAGAR
+ASSIGNMA      ACRYGD   TPCwall
+ASSIGNMA     ACRYLIC   Sislabd
+ASSIGNMA     ACRYLIC   Sislabu
+ASSIGNMA      ARGGAS   Sislabg
+ASSIGNMA     ARGON87   SensVol
+*RESNUCLE          3.      -84.       90.             SensVol 35700000.UARTPC
+*RESNUCLE          3.      -85.       90.             TPCwall          WALLACRY
+*RESNUCLE          3.      -86.       90.            Inner_Ar          UARVET
+*RESNUCLE          3.      -87.       90.             Sislabg          SILSLB
+*RESNUCLE          3.      -88.       90.              CuWall          CUWALL
+* Activated on 7/12/21
+USRBIN           10.     MUON-      -45.     1900.     1300.     1750.muons
+USRBIN        -1500.    -1300.     -550.      250.      250.      250. &
+* Activated on 7/12/21
+*USRBIN           10.   NEUTRON      -90.     1900.     1300.     1750.neutrons
+*USRBIN        -1500.    -1300.     -550.      250.      250.      250. &
+* * ---  this option card activates the call into the  mgdraw.f  routine
+*
+USERDUMP        100.                 0.0        1.                    allfile
+*EVENTBIN        -12.    ENERGY      -60.   SensVol                    SenSVol
+*EVENTBIN        -12.    ENERGY      -61.  Inner_Ar                    Inner_Ar
+*EVENTBIN        -12.    ENERGY      -62.  LAr_Bath                    LAr_Bath
+* Activated 2 cards on 12/7/21
+*USRBIN           10.    ENERGY      -50.     1900.     1350.     1750.energy
+*USRBIN        -1350.    -1350.     -550.      250.      250.      250. &
+*USRBIN           10.  RES-NUCL      -51.     1900.     1350.     2000.RES-NUCL
+*USRBIN        -1350.    -1350.    -1000.      300.      300.      300. &
+*SCORE
+#if 0
+#include seed.inp
+#endif
+RANDOMIZ          1. 20160601.
+*         ---------|---------|---------|---------|---------|---------|
+START       100.       0.0       0.0
+STOP
+
+
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8
+TITLE
+DS-20K UPDATED Geometry
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8
+GLOBAL                                          1.        1.
+DEFAULTS                                                              PRECISIO
+* Changed Energy to 1e4 GeV on 20/5/2022- Teena
+BEAM      -1000000.0       0.0                                        MUON+
+* Deactivated on 20/5/2022 -Teena
+*BEAMPOS          0.0       0.0      -50.
+* Activated on 20/52022 -Teena
+SOURCE
+IONTRANS    HEAVYION
+MUPHOTON          1.                        VACUUM  @LASTMAT
+PAIRBREM          2.              0.0003
+PHOTONUC          1.                        VACUUM  @LASTMAT
+EMFRAY            4.     world  @LASTREG
+PHYSICS        1000.     1000.     1000.     1000.     1000.     1000.PEATHRES
+*         ---------|---------|---------|---------|---------|---------|
+PHYSICS           1.        1.        1.                              COALESCE
+PHYSICS           3.                                                  EVAPORAT
+PHYSICS           1.       0.1      0.15        2.        2.        1.IONSPLIT
+*         ---------|---------|---------|---------|---------|---------|
+RADDECAY          2.
+* ** --- we use geometry FREE format  -  only thing to remember, there can't be
+* **     any empty lines used within the geometry section, comments need *
+*
+GEOBEGIN                                                              COMBNAME
+    0    0          Muon induced Neutron -- (homestake)
+*
+* --- bodies
+*
+RPP BlckBody   -90000. 90000. -90000. 90000. -90000. 90000.
+RPP Vacuum     -9999. 9999. -9999. 9999. -9999. 9999.
+*
+$start_translat 0 0 -109.2
+* * -------------------------------------------------===============-------------------
+*
+YZP CutView    0.0
+*
+XYP Cut        639.
+*
+RCC Buff_t     -1850. 0.0 639. 4400. 0.0 0.0 1850.
+RPP Buff_b     -1850. 2550. -1850. 1850. -1261. 639.
+*
+RCC Rock_tc    -1750. 0.0 639. 4200. 0.0 0.0 1750.
+RCC Rock_tm    -1500. 0.0 639. 3700. 0.0 0.0 1500.
+RCC Rock_tf    -1275. 0.0 639. 3250. 0.0 0.0 1275.
+*
+RPP Rock_bc    -1750. 2450. -1750. 1750. -1161. 639.
+RPP Rock_bm    -1500. 2200. -1500. 1500. -911. 639.
+RPP Rock_bf    -1275. 1975. -1275. 1275. -686. 639.
+*
+RCC Hall_t     -1050. 0.0 639. 2800. 0.0 0.0 1050.
+RPP Hall_b     -1050. 1750. -1050. 1050. -461. 639.
+*
+* * -------------------------------------------------===============-------------------
+$end_translat 
+*
+*
+RPP Bint_ins   -427.52 427.52 -427.52 427.52 -428.965 361.355
+RPP MDEXT      -427.35 427.35 -427.35 427.35 -428.795 361.155
+RPP Bint_MD1   -300. 300. -300. 300. -300. 300.
+RPP Bint_MD0   -100. 100. -100. 100. -100. 100.
+RPP Bext_ins   -506.58 506.58 -506.58 506.58 -508.025 441.355
+RPP BisW1      -505.68 505.68 -505.68 505.68 -507.125 441.355
+RPP BisPol1    -476.58 476.58 -476.58 476.58 -478.025 441.355
+RPP BisPol3    -476.56 476.56 -476.56 476.56 -478.005 441.355
+RPP BisPol4    -476.54 476.54 -476.54 476.54 -477.985 441.355
+RPP BisW2      -467.72 467.72 -467.72 467.72 -469.165 441.355
+RPP Secm       -476.52 476.52 -476.52 476.52 -477.965 441.355
+RPP BisW       -467.4 467.4 -435. 435. -467.4 467.4
+RPP BisW3      -466.52 466.52 -466.52 466.52 -467.965 441.355
+RPP BisPol2    -465.32 465.32 -465.32 465.32 -466.765 441.355
+RPP RFPol2     -428.72 428.72 -428.72 428.72 361.355 441.355
+RPP BisW4      -428.72 428.72 -428.72 428.72 -430.165 441.275
+RPP Bext_SS    -507.58 507.58 -507.58 507.58 -509.025 442.355
+RPP BexCRIO    -570.2 570.2 -570.5 570.5 -570.2 505.8
+* Back Horizontall 1
+RPP BBCH1      -570.2 570.2 -401.7 -398.3 444.3175 503.8375
+* Backt horizontal 1 transversal1 (solded to SS mambrane)
+RPP BCH1t1     -570.2 570.2 -411.4 -388.6 442.355 444.3175
+* Back horizontal 1 transversal 2
+RPP BCH1t2     -570.2 570.2 -411.4 -388.6 503.8375 505.8
+* Back Horizontal 2
+RPP BBCH2      -570.2 570.2 -241.7 -238.3 444.3175 503.8375
+* Backt horizontal 2 transversal1 (solded to SS mambrane)
+RPP BCH2t1     -570.2 570.2 -251.4 -228.6 442.355 444.3175
+* Backt horizontal 2 transversal1 (solded to SS mambrane)
+RPP BCH2t2     -570.2 570.2 -251.4 -228.6 503.8375 505.8
+* Back Horizontal 3
+RPP BBCH3      -570.2 570.2 -81.7 -78.3 444.3175 503.8375
+* Backt horizontal 3 transversal 1
+RPP BCH3t1     -570.2 570.2 -91.4 -68.6 442.355 444.3175
+RPP BCH3t2     -570.2 570.2 -91.4 -68.6 503.8375 505.8
+* Backt horizontal 4 transversal 2
+RPP BCH4t2     -570.2 570.2 68.6 91.4 503.8375 505.8
+* Backt horizontal 4 transversal 1 (solded to SS mambrane)
+RPP BCH4t1     -570.2 570.2 68.6 91.4 442.355 444.3175
+* Back Horizontall 4
+RPP BBCH4      -570.2 570.2 78.3 81.7 444.3175 503.8375
+* Backt horizontal 5 transversal 1
+RPP BCH5t1     -570.2 570.2 228.6 251.4 442.355 444.3175
+* Back Horizontal 5
+RPP BBCH5      -570.2 570.2 238.3 241.7 444.3175 503.8375
+* Backt horizontal 5 transversal 2
+RPP BCH5t2     -570.2 570.2 228.6 251.4 503.8375 505.8
+* Back Horizontal 6
+RPP BBCH6      -570.2 570.2 398.3 401.7 444.3175 503.8375
+* Backt horizontal 6 transversal 1
+RPP BCH6t1     -570.2 570.2 388.6 411.4 442.355 444.3175
+RPP BCH6t2     -570.2 570.2 388.6 411.4 503.8375 505.8
+* Back Vertical 1
+RPP BBCV1      398.3 401.7 -535. 535. 444.3175 503.8375
+* Back Vertical 1, trasversal1
+RPP BCV1t2     388.6 411.4 -535. 535. 503.8375 505.8
+* Back Vertical 1, trasversal1
+RPP BCV1t1     388.6 411.4 -535. 535. 442.355 444.3175
+* Back Vertical 1, trasversal1
+RPP BCV2t1     228.6 251.4 -535. 535. 442.355 444.3175
+* Back Vertical 2
+RPP BBCV2      238.3 241.7 -535. 535. 444.3175 503.8375
+* Back Vertical 1, trasversal1
+RPP BCV2t3     228.6 251.4 -537.8 537.8 508.4 511.2
+* Back Vertical 1, trasversal1
+RPP BCV2t2     228.6 251.4 -535. 535. 503.8375 505.8
+* Back Vertical 3
+RPP BBCV3      78.3 81.7 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV3t1     68.6 91.4 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV3t2     68.6 91.4 -535. 535. 503.8375 505.8
+* Back Vertical 4
+RPP BBCV4      -81.7 -78.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV4t1     -91.4 -68.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV4t2     -91.4 -68.6 -535. 535. 503.8375 505.8
+* Back Vertical 5
+RPP BBCV5      -241.7 -238.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV5t1     -251.4 -228.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV5t2     -251.4 -228.6 -535. 535. 503.8375 505.8
+* Back Vertical 6
+RPP BBCV6      -401.7 -398.3 -535. 535. 444.3175 503.8375
+* FRont Vertical 1, trasversal1
+RPP BCV6t1     -411.4 -388.6 -535. 535. 442.355 444.3175
+* FRont Vertical 1, trasversal1
+RPP BCV6t2     -411.4 -388.6 -535. 535. 503.8375 505.8
+* FRont Vertical 6
+RPP BFRV6      -401.7 -398.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV6t1     -411.4 -388.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 2, trasversal2
+RPP BFV6t2     -411.4 -388.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 5
+RPP BFRV5      -241.7 -238.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 5, trasversal
+RPP BFV5t1     -251.4 -228.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 5, trasversal
+RPP BFV5t2     -251.4 -228.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 4
+RPP BFRV4      -81.7 -78.3 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV4t1     -91.4 -68.6 -535. 535. -510.9875 -509.025
+* FRont Vertical 2, trasversal1
+RPP BFV4t2     -91.4 -68.6 -535. 535. -570.2 -568.2375
+* FRont Vertical 3
+RPP BFRV3      78.3 81.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV3t1     68.6 91.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV3t2     68.6 91.4 -535. 535. -570.2 -568.2375
+* FRont Vertical 2
+RPP BFRV2      238.3 241.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 2, trasversal1
+RPP BFV2t1     228.6 251.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV2t2     228.6 251.4 -535. 535. -570.2 -568.2375
+* FRont Vertical 1
+RPP BFRV1      398.3 401.7 -535. 535. -568.2375 -510.9875
+* FRont Vertical 1, trasversal1
+RPP BFV1t1     388.6 411.4 -535. 535. -510.9875 -509.025
+* FRont Vertical 1, trasversal1
+RPP BFV1t2     388.6 411.4 -535. 535. -570.2 -568.2375
+RPP BFH1       -570.2 570.2 -401.7 -398.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH1t1     -570.2 570.2 -411.4 -388.6 -510.9875 -509.025
+* Front horizontal transversal2
+RPP BFH1t2     -570.2 570.2 -411.4 -388.6 -570.2 -568.2375
+RPP BFH2       -570.2 570.2 -241.7 -238.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH2t1     -570.2 570.2 -251.4 -228.6 -510.9875 -509.025
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH2t2     -570.2 570.2 -251.4 -228.6 -570.2 -568.2375
+RPP BFH3       -570.2 570.2 -81.7 -78.3 -568.2375 -510.9875
+* Front horizontal transversal1 (solded to SS mambrane)
+RPP BFH3t1     -570.2 570.2 -91.4 -68.6 -510.9875 -509.025
+* Front horizontal 3 transversal2
+RPP BFH3t2     -570.2 570.2 -91.4 -68.6 -570.2 -568.2375
+RPP BFH4       -570.2 570.2 78.3 81.7 -568.2375 -510.9875
+* Front horizontal 4 transversal1 (solded to SS mambrane)
+RPP BFH4t1     -570.2 570.2 68.6 91.4 -510.9875 -509.025
+* Front horizontal 4 transversal 2
+RPP BFH4t2     -570.2 570.2 68.6 91.4 -570.2 -568.2375
+RPP BFH5       -570.2 570.2 238.3 241.7 -568.2375 -510.9875
+* Front horizontal 5 transversal1 (solded to SS mambrane)
+RPP BFH5t1     -570.2 570.2 228.6 251.4 -510.9875 -509.025
+* Front horizontal 5 transversal1 2
+RPP BFH5t2     -570.2 570.2 228.6 251.4 -570.02 -568.2375
+RPP BFH6       -570.2 570.2 398.3 401.7 -568.2375 -510.9875
+* Front horizontal 6 transversal1 (solded to SS mambrane)
+RPP BFH6t1     -570.2 570.2 388.6 411.4 -510.9875 -509.025
+* Front horizontal 6 transversal 2
+RPP BFH6t2     -570.2 570.2 388.6 411.4 -570.2 -568.2375
+* Right Vertical 1
+RPP BRIV1      -568.2375 -509.5425 -535. 535. -401.7 -398.3
+* Right Vertical 1
+RPP BRIV1t1    -509.5425 -507.58 -535. 535. -411.4 -388.6
+* Right Vertical 1
+RPP BRIV1t2    -570.2 -568.2375 -535. 535. -411.4 -388.6
+* Right Vertical 2
+RPP BRIV2      -568.2375 -509.5425 -535. 535. -241.7 -238.3
+* Right Vertical 2
+RPP BRIV2t1    -509.5425 -507.58 -535. 535. -251.4 -228.6
+* Right Vertical 2
+RPP BRIV2t2    -570.2 -568.2375 -535. 535. -251.4 -228.6
+* Right Vertical 3
+RPP BRIV3      -568.2375 -509.5425 -535. 535. -81.7 -78.3
+* Right Vertical 3
+RPP BRIV3t1    -509.5425 -507.58 -535. 535. -91.4 -68.6
+* Right Vertical 3
+RPP BRIV3t2    -570.2 -568.2375 -535. 535. -91.4 -68.6
+* Right Vertical 4
+RPP BRIV4      -568.2375 -509.5425 -535. 535. 78.3 81.7
+* Right Vertical 4
+RPP BRIV4t1    -509.5425 -507.58 -535. 535. 68.6 91.4
+* Right Vertical 4
+RPP BRIV4t2    -570.2 -568.2375 -535. 535. 68.6 91.4
+* Right Vertical 5
+RPP BRIV5      -568.2375 -509.5425 -535. 535. 238.3 241.7
+* Right Vertical 5
+RPP BRIV5t1    -509.5425 -507.58 -535. 535. 228.6 251.4
+* Right Vertical 5
+RPP BRIV5t2    -570.2 -568.2375 -535. 535. 228.6 251.4
+* Right Vertical 6
+RPP BRIV6      -568.2375 -509.5425 -535. 535. 398.3 401.7
+* Right Vertical 6
+RPP BRIV6t1    -509.5425 -507.58 -535. 535. 388.6 411.4
+* Right Vertical 6
+RPP BRIV6t2    -570.2 -568.2375 -535. 535. 388.6 411.4
+RPP BLEH1      509.5425 568.2375 -401.7 -398.3 -508.4 508.4
+RPP BLEH1t1    507.58 509.5425 -411.4 -388.6 -508.4 508.4
+RPP BLEH1t2    568.2375 570.2 -411.4 -388.6 -508.4 508.4
+RPP BLEH2      509.5425 568.2375 -241.7 -238.3 -508.4 508.4
+RPP BLEH2t1    507.58 509.5425 -251.4 -228.6 -508.4 508.4
+RPP BLEH2t2    568.2375 570.2 -251.4 -228.6 -508.4 508.4
+RPP BLEH3      509.5425 568.2375 -81.7 -78.3 -508.4 508.4
+RPP BLEH3t1    507.58 509.5425 -91.4 -68.6 -508.4 508.4
+RPP BLEH3t2    568.2375 570.2 -91.4 -68.6 -508.4 508.4
+RPP BLEH4      509.5425 568.2375 78.3 81.7 -508.4 508.4
+RPP BLEH4t1    507.58 509.5425 68.6 91.4 -508.4 508.4
+RPP BLEH4t2    568.2375 570.2 68.6 91.4 -508.4 508.4
+RPP BLEH5      509.5425 568.2375 238.3 241.7 -508.4 508.4
+RPP BLEH5t1    507.58 509.5425 228.6 251.4 -508.4 508.4
+RPP BLEH5t2    568.2375 570.2 228.6 251.4 -508.4 508.4
+RPP BLEH6      509.5425 568.2375 398.3 401.7 -508.4 508.4
+RPP BLEH6t1    507.58 509.5425 388.6 411.4 -508.4 508.4
+RPP BLEH6t2    568.2375 570.2 388.6 411.4 -508.4 508.4
+RPP BRIH1      -568.2375 -509.5425 -401.7 -398.3 -508.4 508.4
+RPP BRIH1t1    -509.5425 -507.58 -411.4 -388.6 -508.4 508.4
+RPP BRIH1t2    -570.2 -568.2375 -411.4 -388.6 -508.4 508.4
+RPP BRIH2      -568.2375 -509.5425 -241.7 -238.3 -508.4 508.4
+RPP BRIH2t1    -509.5425 -507.58 -251.4 -228.6 -508.4 508.4
+RPP BRIH2t2    -570.2 -568.2375 -252.1 -229.3 -508.4 508.4
+RPP BRIH3      -568.2375 -509.5425 -81.7 -78.3 -508.4 508.4
+RPP BRIH3t2    -570.2 -568.2375 -91.4 -68.6 -508.4 508.4
+RPP BRIH3t1    -509.5425 -507.58 -91.4 -68.6 -508.4 508.4
+RPP BRIH4      -568.2375 -509.5425 78.3 81.7 -508.4 508.4
+RPP BRIH4t1    -509.5425 -507.58 68.6 91.4 -508.4 508.4
+RPP BRIH4t2    -570.2 -568.2375 68.6 91.4 -508.4 508.4
+RPP BRIH5      -568.2375 -509.5425 238.3 241.7 -508.4 508.4
+RPP BRIH5t1    -509.5425 -507.58 228.6 251.4 -508.4 508.4
+RPP BRIH5t2    -570.2 -568.2375 228.6 251.4 -508.4 508.4
+RPP BRIH6      -568.2375 -509.5425 398.3 401.7 -508.4 508.4
+RPP BRIH6t1    -509.5425 -507.58 388.6 411.4 -508.4 508.4
+RPP BRIH6t2    -570.2 -568.2375 388.6 411.4 -508.4 508.4
+* Left Vertical 1
+RPP BLEV1      509.5425 568.2375 -535. 535. -401.7 -398.3
+RPP BLEV1t1    507.58 509.5425 -535. 535. -411.4 -388.6
+RPP BLEV1t2    568.2375 570.2 -535. 535. -411.4 -388.6
+* Leftt Vertical 2
+RPP BLEV2      509.5425 568.2375 -535. 535. -241.7 -238.3
+* Leftt Vertical 2 transversal 1 (solded to SS mambrane)
+RPP BLEV2t1    507.58 509.5425 -535. 535. -251.4 -228.6
+* Leftt Vertical 2 transversal 2 (distant)
+RPP BLEV2t2    568.2375 570.2 -535. 535. -251.4 -228.6
+* Leftt Vertical 3
+RPP BLEV3      509.5425 568.2375 -535. 535. -81.7 -78.3
+* Leftt Vertical 3 tranversal1 (solded to SS mambrane)
+RPP BLEV3t1    507.58 509.5425 -535. 535. -91.4 -68.6
+* Leftt Vertical 3 transversal2
+RPP BLEV3t2    568.2375 570.2 -535. 535. -91.4 -68.6
+* Left Vertical 4
+RPP BLEV4      509.5425 568.2375 -535. 535. 78.3 81.7
+* Left Vertical 4 transversal 1 (solded to SS mambrane)
+RPP BLEV4t1    507.58 509.5425 -535. 535. 68.6 91.4
+* Left Vertical 4 transversal 2
+RPP BLEV4t2    568.2375 570.2 -535. 535. 68.6 91.4
+* Left Vertical 5
+RPP BLEV5      509.5425 568.2375 -535. 535. 238.3 241.7
+* Left Vertical 5 transversal 1 (solded to SS mambrane)
+RPP BLEV5t1    507.58 509.5425 -535. 535. 228.6 251.4
+* Left Vertical 5 transersal 2
+RPP BLEV5t2    568.2375 570.2 -535. 535. 228.6 251.4
+* Left Vertical 6
+RPP BLEV6      509.5425 568.2375 -535. 535. 398.3 401.7
+* Left Vertical 6 transversal 1 (solded to SS mambrane)
+RPP BLEV6t1    507.58 509.5425 -535. 535. 388.6 411.4
+* Left Vertical 6 transversal 2 (solded to SS mambrane)
+RPP BLEV6t2    568.2375 570.2 -535. 535. 388.6 411.4
+RPP BFH7       -570.2 570.2 -400.9 -399.1 -567.4 -511.2
+RPP BFLL1t1    -411.4 -388.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL1t2    -411.4 -388.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL2t1    -251.4 -228.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL2t2    -251.4 -228.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL3t1    -91.4 -68.6 -509.5425 -507.58 -508.4 508.4
+RPP BFLL3t2    -91.4 -68.6 -570.5 -568.5375 -570.2 570.2
+RPP BFLL4t1    68.6 91.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL4t2    68.6 91.4 -570.5 -568.5375 -570.2 570.
+RPP BFLL5t1    228.6 251.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL6t1    388.6 411.4 -509.5425 -507.58 -508.4 508.4
+RPP BFLL6t2    388.6 411.4 -570.5 -568.5375 -570.2 570.2
+RPP BFLL5t2    228.6 251.4 -570.5 -568.5375 -570.2 570.2
+RPP BFLL1      -401.7 -398.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL2      -241.7 -238.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL3      -81.97 -78.3 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL4      78.3 81.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL5      238.3 241.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLL6      398.3 401.7 -568.5375 -509.5425 -508.4 508.4
+RPP BFLTr1     -508.4 508.4 -568.5375 -509.5425 398.1 401.9
+RPP BFLTr1t1   -508.4 508.4 -509.5425 -507.58 388.6 411.4
+RPP BFLTr2t1   -508.4 508.4 -509.5425 -507.58 228.6 251.4
+RPP BFLTr3t1   -508.4 508.4 -509.5425 -507.58 68.6 91.4
+RPP BFLTr4t1   -508.4 508.4 -509.5425 -507.58 -91.4 -68.6
+RPP BFLTr5t1   -508.4 508.4 -509.5425 -507.58 -251.4 -228.6
+RPP BFLTr6t1   -508.4 508.4 -509.5425 -507.58 -411.4 -388.6
+RPP BFLTr6t2   -570.2 570.2 -570.5 -568.5375 -411.4 -388.6
+RPP BFLTr5t2   -570.2 570.2 -570.5 -568.5375 -251.4 -228.6
+RPP BFLTr4t2   -570.2 570.2 -570.5 -568.5375 -91.4 -68.6
+RPP BFLTr3t2   -570.2 570.2 -570.5 -568.5375 68.6 91.4
+RPP BFLTr2t2   -570.2 570.2 -570.5 -568.5375 228.6 251.4
+RPP BFLTr1t2   -570.2 570.2 -570.5 -568.5375 388.6 411.4
+RPP BCETr1     -508.4 508.4 509.5425 568.5375 398.3 401.7
+RPP BFLTr2     -508.4 508.4 -568.5375 -509.5425 238.3 241.7
+RPP BFLTr3     -508.4 508.4 -568.5375 -509.5425 78.3 81.7
+RPP BFLTr4     -508.4 508.4 -568.5375 -509.5425 -81.7 -78.3
+RPP BFLTr5     -508.4 508.4 -568.5375 -509.5425 -241.7 -238.3
+RPP BFLTr6     -508.4 508.4 -568.5375 -509.5425 -401.7 -398.3
+RPP BCTr1t1    -570.2 570.2 568.5375 570.5 388.6 411.4
+RPP BCTr1t2    -508.4 508.4 507.58 509.5425 388.6 411.4
+RPP BCTr2t2    -508.4 508.4 507.58 509.5425 228.6 251.4
+RPP BCTr3t2    -508.4 508.4 507.58 509.5425 68.6 91.4
+RPP BCTr4t2    -508.4 508.4 507.58 509.5425 -91.4 -68.6
+RPP BCTr5t2    -508.4 508.4 507.58 509.5425 -251.4 -228.6
+RPP BCTr6t2    -508.4 508.4 507.58 509.5425 -411.4 -388.6
+RPP BCTr2t1    -570.2 570.2 568.5375 570.5 228.6 251.4
+RPP BCTr3t1    -570.2 570.2 568.5375 570.5 68.6 91.4
+RPP BCTr4t1    -570.2 570.2 568.5375 570.5 -91.4 -68.6
+RPP BCTr5t1    -570.2 570.2 568.5375 570.5 -251.4 -228.6
+RPP BCTr6t1    -570.2 570.2 568.5375 570.5 -411.4 -388.6
+RPP BCETr2     -508.4 508.4 509.5425 568.5375 238.3 241.7
+RPP BCETr3     -508.4 508.4 509.5425 568.5375 78.3 81.7
+RPP BCETr4     -508.4 508.4 509.5425 568.5375 -81.7 -78.3
+RPP BCETr5     -508.4 508.4 509.5425 568.5375 -241.7 -238.3
+RPP BCETr6     -508.4 508.4 509.5425 568.5375 -401.7 -398.3
+RPP BCEL1      -401.7 -398.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL1t2    -411.4 -388.6 507.58 509.5425 -508.4 508.4
+RPP BCEL2t2    -251.4 -228.6 507.58 509.5425 -508.4 508.4
+RPP BCEL3t2    -91.4 -68.6 507.58 509.5425 -508.4 508.4
+RPP BCEL4t2    68.6 91.4 507.58 509.5425 -508.4 508.4
+RPP BCEL5t2    228.6 251.4 507.58 509.5425 -508.4 508.4
+RPP BCEL6t2    388.6 411.4 507.58 509.5425 -508.4 508.4
+RPP BCEL1t1    -411.4 -388.6 568.5375 570.5 -570.2 570.2
+RPP BCEL2t1    -251.4 -228.6 568.5375 570.5 -570.2 570.2
+RPP BCEL3t1    -91.4 -68.6 568.5375 570.5 -570.2 570.2
+RPP BCEL4t1    68.6 91.4 568.5375 570.5 -570.2 570.2
+RPP BCEL5t1    228.6 251.4 568.5375 570.5 -570.2 570.2
+RPP BCEL6t1    388.6 411.4 568.5375 570.5 -570.2 570.2
+RPP BCEL2      -241.7 -238.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL3      -81.7 -78.3 509.5425 568.5375 -508.4 508.4
+RPP BCEL4      78.3 81.7 509.5425 568.5375 -508.4 508.4
+RPP BCEL5      238.3 241.7 509.5425 568.5375 -508.4 508.4
+RPP BCEL6      398.3 401.7 509.5425 568.5375 -508.4 508.4
+RCC BPipe1     154.414 312.6217 -1440.4 -39.5716 -174.5466 870. 12.4428
+RCC BPipe2     154.414 312.6217 -1440.4 -182.4791 -174.5466 870. 12.4428
+ZCC ADDRCC1    0.0 0.0 12.428
+* polar -11.342
+QUA ADDRCC2    1. .9613229093904 .0386770906096 0.0 0.0 .38564840604662 0.0 0.0
+              0.0 -154.455184
+* polar -11.342 and amimuthal 2.604
+QUA ADDRCC3    .9980157017614 .9613229093904 .0406613888482 -.017521059645
+              .0872608484104 .38525018566539 0.0 0.0 0.0 -154.455184
+* polar -11.342 and amimuthal 2.604, translation
+QUA Pipe1n     .9980157017614 .9613229093904 .0406613888482 -.017521059645
+              .0872608484104 .38525018566539 -177.0646558109 -43.51799006583
+              -16.79080017612 8227.4545078499
+* polar -11.342, azimuthal 11.844
+QUA RCCb2      .95950271365765 .9613229093904 .07917437695195 -.0791534513033
+              .38621723901426 .377437974021 0.0 0.0 0.0 -154.455184
+* polar -11.342, azimuthal 11.844, translation
+QUA Pipe2n     .95950271365765 .9613229093904 .07917437695195 -.0791534513033
+              .38621723901426 0.377437974021 284.73072150876 -45.1677091204
+              50.454669253507 21259.889657895
+XYP BPL1       -2000.
+XYP BPL2       2000.
+RPP BEXTn      -1000. 1000. -1000. 1000. -1440.4 2000.
+* new_Outer_LAr_buffer_int_wall
+RCC OLAr_IW    0.0 0.0 -280. 0.0 0.0 560. 275.
+* new_Acrylic-Gd_ext
+RCC ACR_GdE    0.0 0.0 -240. 0.0 0.0 480. 235.
+* Cuext_RCC
+RCC CUEXT      0.0 0.0 -263.911 0.0 0.0 461.822 237.49
+* Veto_ext_RCC
+RCC RPPVETO    0.0 0.0 -262.15 0.0 0.0 458.3 235.73
+* TpC_wall_external
+RCC TPCGDA     0.0 0.0 -237.345 0.0 0.0 408.69 194.73
+* Sislab1
+RCC Sislab1    0.0 0.0 -222.345 0.0 0.0 15. 179.73
+* gas pocket
+RCC Sislab3    0.0 0.0 140.655 0.0 0.0 0.7 179.73
+* Sislab2
+RCC Sislab2    0.0 0.0 141.355 0.0 0.0 15. 179.73
+* new_TPC_wall_cylinder_int
+RCC IntTPC     0.0 0.0 -207.345 0.0 0.0 348. 179.73
+*
+* ---
+*
+END
+world        5 +BlckBody -Vacuum
+void         5 +Vacuum   -Rock_tc -Rock_bc |  +Vacuum +Cut -Rock_bc
+*
+outside      5 +Rock_tc  -Rock_tf -Cut    | +Rock_bc  -Rock_bf
+rock         5 +Rock_tf  -Hall_t -Cut    | +Rock_bf  -Hall_b
+hall         5 +Hall_b -BexCRIO   | +Hall_t -Cut -BexCRIO
+* Target
+Rint_ins     5 + Bint_ins - MDEXT
+* Target
+Rext_SS      5 +Bext_SS -Bext_ins
+* Wood layer (1 external) 12 mm
+RW1          5 +Bext_ins -BisW1
+RPOLY1       5 +BisW1 -BisPol1
+RPOLY2       5 +BisW3 -BisPol2
+RW2          5 +BisPol1 -BisPol3
+RW7          5 +BisPol3 -BisPol4
+RW5          5 +BisPol4 -Secm
+SecMem       5 +Secm -BisW2
+RW3          5 +BisW2 -BisW3
+RPolyT1      5 +RFPol2 -Bint_ins
+RW4          5 +BisPol2 -BisW4 -RFPol2
+RSSint       5 +BisW4 -RFPol2 -Bint_ins
+RFRV6        5 +BFRV6
+               | +BFV6t1
+               | +BFV6t2
+RFRV5        5 +BFRV5 |
+               +BFV5t1 |
+               +BFV5t2
+RFRV4        5 +BFRV4 |
+               +BFV4t1 |
+               +BFV4t2
+RFRV3        5 +BFRV3 |
+               +BFV3t1 |
+               +BFV3t2
+* Target
+Rext_OUT     5 -Bext_SS +BexCRIO -BFRV6 -BFRV5 -BFRV4 -BFRV3 -BFRV2 -BFRV1 -BFV1t1 -BFV1t2 -BFV2t1 -BFV2t2
+               -BFV3t1 -BFV3t2 -BFV4t1 -BFV4t2 -BFV5t1 -BFV5t2 -BFV6t1 -BFV6t2 -BBCV6 -BBCV5 -BBCV4 -BBCV3 -BBCV2
+               -BBCV1 -BCV1t1 -BCV1t2 -BCV2t1 -BCV2t2 -BCV3t1 -BCV3t2 -BCV4t1 -BCV4t2 -BCV5t1 -BCV5t2 -BCV6t1
+               -BCV6t2 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               -BLEV1t1 -BLEV1t2 -BLEV2t1 -BLEV2t2 -BLEV3t1 -BLEV3t2 -BLEV4t1 -BLEV4t2 -BLEV5t1 -BLEV5t2 -BLEV6t1
+               -BLEV6t2 -BRIV1t1 -BRIV1t2 -BRIV2t1 -BRIV2t2 -BRIV3t1 -BRIV3t2 -BRIV4t1 -BRIV4t2 -BRIV5t1 -BRIV5t2
+               -BRIV6t1 -BRIV6t2 -BFH1 -BFH2 -BFH3 -BFH4 -BFH5 -BFH6 -BBCH1 -BBCH2 -BBCH3 -BBCH4 -BBCH5 -BBCH6
+               -BFH1t1 -BFH1t2 -BFH2t1 -BFH3t1 -BFH2t2 -BFH3t2 -BFH4t1 -BFH4t2 -BFH5t1 -BFH5t2 -BFH6t1 -BFH6t2
+               -BCH1t1 -BCH1t2 -BCH2t1 -BCH2t2 -BCH3t1 -BCH3t2 -BCH4t1 -BCH4t2 -BCH5t1 -BCH5t2 -BCH6t1 -BCH6t2
+               -BRIH1 -BRIH2 -BRIH3 -BRIH4 -BRIH5 -BRIH6 -BLEH1 -BLEH2 -BLEH3 -BLEH4 -BLEH5 -BLEH6 -BRIH1t1
+               -BRIH1t2 -BRIH2t1 -BRIH2t2 -BRIH3t1 -BRIH3t2 -BRIH4t1 -BRIH4t2 -BRIH5t1 -BRIH5t2 -BRIH6t1 -BRIH6t2
+               -BLEH1t1 -BLEH1t2 -BLEH2t1 -BLEH2t2 -BLEH3t1 -BLEH3t2 -BLEH4t1 -BLEH4t2 -BLEH5t1 -BLEH5t2 -BLEH6t1
+               -BLEH6t2 -BCETr1 -BCETr2 -BCETr3 -BCETr5 -BCETr4 -BCETr6 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1
+               -BCTr5t1 -BCTr6t1 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2 -BCEL1 -BCEL2 -BCEL3
+               -BCEL4 -BCEL5 -BCEL6 -BCEL1t1 -BCEL2t1 -BCEL3t1 -BCEL4t1 -BCEL5t1 -BCEL6t1 -BCEL1t2 -BCEL2t2
+               -BCEL3t2 -BCEL4t2 -BCEL5t2 -BCEL6t2 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr5 -BFLTr4 -BFLTr6 -BFLTr1t1
+               -BFLTr1t2 -BFLTr2t1 -BFLTr2t2 -BFLTr3t1 -BFLTr3t2 -BFLTr4t1 -BFLTr4t2 -BFLTr5t1 -BFLTr5t2
+               -BFLTr6t1 -BFLTr6t2 -BFLL1 -BFLL2 -BFLL3 -BFLL4 -BFLL5 -BFLL6 -BFLL1t1 -BFLL1t2 -BFLL2t1 -BFLL2t2
+               -BFLL3t1 -BFLL3t2 -BFLL4t1 -BFLL4t2 -BFLL5t1 -BFLL5t2 -BFLL6t1 -BFLL6t2
+RFRV2        5 +BFRV2 |
+               +BFV2t1 |
+               +BFV2t2
+RFRV1        5 +BFRV1|
+               +BFV1t1 |
+               +BFV1t2
+RBBV6        5 +BBCV6 |
+               +BCV6t1 |
+               +BCV6t2
+RBBV5        5 +BBCV5
+               | +BCV5t1
+               | +BCV5t2
+RBBV4        5 +BBCV4 |
+               +BCV4t1 |
+               +BCV4t2
+RBBV3        5 +BBCV3
+               | +BCV3t1
+               | +BCV3t2
+RBBV2        5 +BBCV2 |
+               +BCV2t1 |
+               +BCV2t2
+RBBV1        5 +BBCV1 |
+               +BCV1t1 |
+               +BCV1t2
+RRIV1        5 +BRIV1
+               | +BRIV1t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV1t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV2        5 +BRIV2
+               | +BRIV2t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV2t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV3        5 +BRIV3
+               | +BRIV3t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV3t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV4        5 +BRIV4
+               | +BRIV4t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH5t1 -BRIH4t1 -BRIH6t1
+               | +BRIV4t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV5        5 +BRIV5
+               | +BRIV5t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV5t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIV6        5 +BRIV6
+               | +BRIV6t1 -BRIH1t1 -BRIH2t1 -BRIH3t1 -BRIH4t1 -BRIH5t1 -BRIH6t1
+               | +BRIV6t2 -BRIH1t2 -BRIH2t2 -BRIH3t2 -BRIH4t2 -BRIH5t2 -BRIH6t2
+RRIH1        5 +BRIH1 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH1t1
+               | +BRIH1t2
+RRIH2        5 +BRIH2 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH2t1
+               | +BRIH2t2
+RRIH3        5 +BRIH3 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH3t1
+               | +BRIH3t2
+RRIH4        5 +BRIH4 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH4t1
+               | +BRIH4t2
+RRIH5        5 +BRIH5 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH5t1
+               | +BRIH5t2
+RRIH6        5 +BRIH6 -BRIV1 -BRIV2 -BRIV3 -BRIV4 -BRIV5 -BRIV6
+               | +BRIH6t1
+               | +BRIH6t2
+RLEH1        5 +BLEH1 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH1t2
+               | +BLEH1t1
+RLEH2        5 +BLEH2 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH2t2
+               | +BLEH2t1
+RLEH3        5 +BLEH3 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH3t2
+               | +BLEH3t1
+RLEH4        5 +BLEH4 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH4t2
+               | +BLEH4t1
+RLEH5        5 +BLEH5 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH5t2
+               | +BLEH5t1
+RLEH6        5 +BLEH6 -BLEV1 -BLEV2 -BLEV3 -BLEV4 -BLEV5 -BLEV6
+               | +BLEH6t2
+               | +BLEH6t1
+RLEV1        5 +BLEV1
+               | +BLEV1t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV1t2 -BLEH2t2 -BLEH1t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV2        5 +BLEV2
+               | +BLEV2t1 -BLEH3t1 -BLEH1t1 -BLEH2t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV2t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV3        5 +BLEV3
+               | +BLEV3t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV3t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV4        5 +BLEV4
+               | +BLEV4t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV4t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV5        5 +BLEV5
+               | +BLEV5t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV5t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RLEV6        5 +BLEV6
+               | +BLEV6t1 -BLEH1t1 -BLEH2t1 -BLEH3t1 -BLEH4t1 -BLEH5t1 -BLEH6t1
+               | +BLEV6t2 -BLEH1t2 -BLEH2t2 -BLEH3t2 -BLEH4t2 -BLEH5t2 -BLEH6t2
+RFH1         5 +BFH1 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH1t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1|
+               +BFH1t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH2         5 +BFH2 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH2t1 -BFV2t1 -BFV1t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH2t2 -BFV1t2 -BFV2t2  -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH3         5 +BFH3 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH3t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH3t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH4         5 +BFH4 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH4t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH4t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH6         5 +BFH6 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH6t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH6t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RFH5         5 +BFH5 -BFRV1 -BFRV2 -BFRV3 -BFRV4 -BFRV5 -BFRV6 |
+               +BFH5t1 -BFV1t1 -BFV2t1 -BFV3t1 -BFV4t1 -BFV5t1 -BFV6t1 |
+               +BFH5t2 -BFV1t2 -BFV2t2 -BFV3t2 -BFV4t2 -BFV5t2 -BFV6t2
+RBCH1        5 +BBCH1 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH1t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH1t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH2        5 +BBCH2 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6
+               | +BCH2t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1
+               | +BCH2t2 -BCV2t2 -BCV1t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH5        5 +BBCH5 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH5t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH5t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH3        5 +BBCH3 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6
+               | +BCH3t1 -BCV1t1 -BCV2t1 -BCV4t1 -BCV3t1 -BCV5t1 -BCV6t1
+               | +BCH3t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH6        5 +BBCH6 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH6t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1|
+               +BCH6t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RBCH4        5 +BBCH4 -BBCV1 -BBCV2 -BBCV3 -BBCV4 -BBCV5 -BBCV6 |
+               +BCH4t1 -BCV1t1 -BCV2t1 -BCV3t1 -BCV4t1 -BCV5t1 -BCV6t1 |
+               +BCH4t2 -BCV1t2 -BCV2t2 -BCV3t2 -BCV4t2 -BCV5t2 -BCV6t2
+RCETR1       5 +BCETr1
+               | +BCTr1t1
+               | +BCTr1t2
+RCETR2       5 +BCETr2
+               | +BCTr2t1
+               | +BCTr2t2
+RCETR3       5 +BCETr3
+               | +BCTr3t1
+               | +BCTr3t2
+RCETR4       5 +BCETr4
+               | +BCTr4t1
+               | +BCTr4t2 -BCEL6t2 -BCEL5t2 -BCEL4t2
+RCETR5       5 +BCETr5
+               | +BCTr5t1
+               | +BCTr5t2
+RCETR6       5 +BCETr6
+               | +BCTr6t1
+               | +BCTr6t2
+RCEL1        5 +BCEL1 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL1t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL1t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL3        5 +BCEL3 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL3t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL3t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL2        5 +BCEL2 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL2t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL2t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr4t2 -BCTr5t2 -BCTr6t2
+RCEL4        5 +BCEL4 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL4t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL4t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RCEL6        5 +BCEL6 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL6t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL6t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RFLTr3       5 +BFLTr3 |
+               +BFLTr3t1 |
+               +BFLTr3t2
+RCEL5        5 +BCEL5 -BCETr1 -BCETr3 -BCETr2 -BCETr4 -BCETr5 -BCETr6
+               | +BCEL5t1 -BCTr1t1 -BCTr2t1 -BCTr3t1 -BCTr4t1 -BCTr5t1 -BCTr6t1
+               | +BCEL5t2 -BCTr1t2 -BCTr2t2 -BCTr3t2 -BCTr5t2 -BCTr6t2
+RFLTr1       5 +BFLTr1 |
+               +BFLTr1t1 |
+               +BFLTr1t2
+RFLTr4       5 +BFLTr4 |
+               +BFLTr4t1 |
+               +BFLTr4t2
+RFLTr2       5 +BFLTr2 |
+               +BFLTr2t1 |
+               +BFLTr2t2
+RFLTr5       5 +BFLTr5 |
+               +BFLTr5t1 |
+               +BFLTr5t2
+RFLTr6       5 +BFLTr6 |
+               +BFLTr6t1 |
+               +BFLTr6t2
+RFLL1        5 +BFLL1 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL1t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL1t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL2        5 +BFLL2 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL2t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL2t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL3        5 +BFLL3 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL3t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL3t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL4        5 +BFLL4 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL4t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL4t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL5        5 +BFLL5 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL5t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL5t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+RFLL6        5 +BFLL6 -BFLTr1 -BFLTr2 -BFLTr3 -BFLTr4 -BFLTr5 -BFLTr6
+               | +BFLL6t1 -BFLTr1t1 -BFLTr2t1 -BFLTr3t1 -BFLTr4t1 -BFLTr5t1 -BFLTr6t1
+               | +BFLL6t2 -BFLTr6t2 -BFLTr5t2 -BFLTr4t2 -BFLTr3t2 -BFLTr2t2 -BFLTr1t2
+CuWall       5 +CUEXT-RPPVETO
+LAr_Bath     5 +MDEXT -CUEXT
+Inner_Ar     5 +RPPVETO  -TPCGDA
+TPCwall      5 +TPCGDA -IntTPC -Sislab1 -Sislab3 -Sislab2
+Sislabd      5 +Sislab1
+SensVol      5 +IntTPC -Sislab3
+* Gas pocket
+Sislabg      5 +Sislab3
+Sislabu      5 +Sislab2 -Sislab3
+*
+*
+*
+*
+END
+GEOEND
+*         ---------|---------|---------|---------|---------|---------|
+MATERIAL                        0.001205                              STDAIR
+COMPOUND   -0.000124    CARBON -0.755267  NITROGEN -0.231781    OXYGENSTDAIR
+COMPOUND   -0.012827     ARGON                                        STDAIR
+MATERIAL         19.   39.0983      .862                              POTASSIU
+MATERIAL                            2.71                              GRSasso
+COMPOUND      -30.29   CALCIUM    -11.88    CARBON    -47.91    OXYGENGRSasso
+COMPOUND       -5.58  MAGNESIU     -1.27   SILICON     -1.03  ALUMINUMGRSasso
+COMPOUND       -1.03  POTASSIU                                        GRSasso
+MATERIAL                              1.                              WATER
+MATERIAL         29.                8.96                              CU87
+MATERIAL         16.                2.07                              SULFUR
+MATERIAL                            1.19                              ACRYLIC
+COMPOUND       33.34    CARBON     53.34  HYDROGEN     13.32    OXYGENACRYLIC
+COMPOUND       66.67  HYDROGEN     33.33    OXYGEN                    WATER
+* Composite density for ACRYGD~1.26 ?
+MATERIAL                            1.26                              ACRYGD
+MATERIAL         64.                 7.9                              GADOLINI
+* Gadolinium Sulphate density?
+MATERIAL                             7.9                              GDS
+COMPOUND       11.76  GADOLINI     17.65    SULFUR     70.59    OXYGENGDS
+COMPOUND        -99.   ACRYLIC       -1.  GADOLINI                    ACRYGD
+*         ---------|---------|---------|---------|---------|---------|
+MATERIAL         24.                7.18                              CHROMIUM
+MATERIAL         14.                2.33                              SILICO87
+* Deactivated on 12/7/21
+MATERIAL                           1.026                              SCINT
+* Deactivated on 12/7/21
+COMPOUND         32.  CARBON87       37.    BoundH        2.    NewBORSCINT
+MATERIAL         42.               10.22                              MOLYBDEN
+MATERIAL         25.                7.21                              MANGANES
+MATERIAL         27.                 8.9                              COBALT
+MATERIAL         15.                1.82                              PHOSPHO
+*MATERIAL         29.                8.96                              CU87
+* Polyurethane foam isolation - 0.088 kg/m3
+MATERIAL                           0.088                              Polyure
+COMPOUND      -42.86    CARBON    -32.65    OXYGEN    -14.28  NITROGENPolyure
+COMPOUND      -10.21  HYDROGEN                                        Polyure
+* Plywood isolation - 650 kg/m3
+MATERIAL                            0.65                              Plywood
+COMPOUND       -49.6    CARBON      -44.    OXYGEN      -6.3  HYDROGENPlywood
+COMPOUND        -0.1  NITROGEN                                        Plywood
+* polyurethane foam - 40 kg/m3 for roof
+MATERIAL                            0.04                              Polyure2
+COMPOUND      -42.86    CARBON    -32.65    OXYGEN    -14.28  NITROGENPolyure2
+COMPOUND      -10.21  HYDROGEN                                        Polyure2
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL          5.                2.37                              BORON
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL         18.    39.948     1.400                              ARGON87
+* Though Ar-40, it is liquid, look at the density
+MATERIAL         18.               1.400                              ARGON-40
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+MATERIAL         18.    39.948     1.400                              ARGON87B
+MATERIAL          5.                2.37                              BOR1087
+MATERIAL          5.       11.      2.37                              BOR1187
+MATERIAL                   10.      2.37                              NewBOR
+COMPOUND        -19.   BOR1087      -81.   BOR1187                    NewBOR
+MATERIAL          6.     12.01      2.25                              CARBON87
+MATERIAL         25.    54.938      7.43                              MANGAN87
+MATERIAL         24.       52.      7.19                              CHROMI87
+MATERIAL         28.     58.69       8.9                              NICKEL87
+MATERIAL         15.    30.974      1.82                              PHOSPH87
+MATERIAL         14.    28.086      2.33                              SILICO87
+MATERIAL         26.     55.85      7.87                              IRON87
+MATERIAL         24.                7.18                              CHROMIUM
+MATERIAL         42.               10.22                              MOLYBDEN
+MATERIAL         25.                7.21                              MANGANES
+MATERIAL         27.                 8.9                              COBALT
+MATERIAL         15.                1.82                              PHOSPHO
+MATERIAL         16.                2.07                              SULFUR
+MATERIAL                            2.20                              Teflon
+COMPOUND          1.    CARBON        2.  FLUORINE                    Teflon
+* ..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+* Polypyromellitimide Polyimide, Kapton
+* Chemical       O = C   H-C   C = O
+* Formula           / \  // \ / \      H-C - C-H        H-C - C-H
+*                  /   \C    C   \    //     \        //     \
+*            ---- N     |    ||   N - C        C - O - C        C ----
+*                  \   /C    C   /     \     /          \     /
+*  C  H  N O        \ /  \ / \ /      H-C = C-H        H-C = C-H
+*   22 10 2 5    O = C   H-C    C = O
+MATERIAL                            1.43                              KAPTON
+COMPOUND         10.  HYDROGEN       22.  CARBON87        2.  NITROGENKAPTON
+COMPOUND          5.    OXYGEN                                        KAPTON
+MATERIAL         35.     79.91      4.10                              BROMINE
+MATERIAL                             1.8                              FR4
+COMPOUND     -0.7088  HYDROGEN   -8.4464    CARBON   -6.2434   BROMINEFR4
+COMPOUND    -20.8813   SILICON  -11.8249   CALCIUM   -6.1296  ALUMINUMFR4
+COMPOUND     -2.5691     BORON    -.9977  MAGNESIU  -42.1988    OXYGENFR4
+*
+MATERIAL         18.    39.948     0.006                              ARGGAS
+* aisi304 is cold steel
+MATERIAL                            8.19                              AISI304
+COMPOUND     -0.0008  CARBON87     -0.02  MANGAN87     -0.19  CHROMI87AISI304
+COMPOUND       -0.10  NICKEL87  -0.00045  PHOSPH87     -0.01  SILICO87AISI304
+COMPOUND    -0.67875    IRON87                                        AISI304
+* nomex : 2 times C6H5 +2O, 2C, 2N, 2H -->C8H7N2H2
+MATERIAL                           0.048                              NOMEX
+COMPOUND          2.  HYDROGEN        8.    CARBON        2.  NITROGENNOMEX
+COMPOUND          2.    OXYGEN                                        NOMEX
+* Basotect melamine foam  formaldehyde-melamine-sodium bisulfite copolymer.
+* melamine is C3N6H6
+* formaldeide is CH2O
+* sodium bisulfite NaHSO3
+* se tutto fosse allo stesso modo, avremmo un totale di
+* C4N6H9O4NaS
+MATERIAL                           0.009                              BASOTECT
+COMPOUND          9.  HYDROGEN        4.  CARBON87        6.  NITROGENBASOTECT
+COMPOUND          4.    OXYGEN        1.    SODIUM        1.    SULFURBASOTECT
+* Polyethylene Terephthalate Mylar, Melinex
+* Chemical            H-C = C-H            H   H
+* Formula             /       \            |   |
+*       ---- O - C - C         C - C - O - C - C -------
+*                ||   \     //    ||      |   |
+*  C  H 0        O    H-C - C-H    O       H   H
+*   10 8 4
+MATERIAL                           1.397                              Mylar
+COMPOUND          8.  HYDROGEN       10.    CARBON        4.    OXYGENMylar
+* Epoxy (molded)
+* Chemical           H-C - C-H     CH3  H-C - C-H        H   H   H
+* Formula             //    \     |     //    \        |   |   |
+*          ----- O - C        C -- C -- C        C - O - C - C - C ---
+*  C  H  0            \     /      |     \     /         |   |   |
+*   18 19 3          H-C = C-H     CH3  H-C = C-H        H   O   H
+* Molded epoxy usually has fillers of glass fiber (1.8 - 2.0 g/cm3) or of
+* mineral fiber (1.6 - 2.06 g/cm3).
+MATERIAL                            1.19                              Epoxy
+COMPOUND         19.  HYDROGEN       18.    CARBON        3.    OXYGENEpoxy
+MATERIAL                            2.61                              EGlass
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMEGlass
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONEGlass
+MATERIAL                            1.85                              G10
+COMPOUND        -0.6    EGlass      -0.4     Epoxy                    G10
+MATERIAL                            2.23                              TGlass
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMTGlass
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONTGlass
+MATERIAL                           0.892                              TGlass40
+COMPOUND          7.    OXYGEN       2.5   SILICON       0.6   CALCIUMTGlass40
+COMPOUND         1.2  ALUMINUM      0.11  MAGNESIU      1.04     BORONTGlass40
+MATERIAL         17.            0.003214                              CHLORINE
+MATERIAL          9.            0.001696                              FLUORINE
+* Concrete
+* Concrete has a wide variation in density and composition. The above
+* description is for poured structural concrete with 10% moisture
+* content. Concrete block will have a density of about 2.05 g/cm3.
+* Ranges of concrete composition are : C (8-25%), O (38-60%), Si (8-18%).
+* Concrete composition can be analyzed cheaply by commercial laboratories.
+MATERIAL                            2.34                              Concrete
+COMPOUND         23.    CARBON       40.    OXYGEN       12.   SILICONConcrete
+COMPOUND         12.   CALCIUM       10.  HYDROGEN        2.  MAGNESIUConcrete
+* S235-steel
+*
+MATERIAL                            7.85                              S235stee
+COMPOUND       -0.05   PHOSPHO     -0.05    SULFUR     -0.05   SILICONS235stee
+COMPOUND       -0.22    CARBON      -1.6  MANGANES    -93.08      IRONS235stee
+* Steel316LN
+* Stainless steel AISI316LN
+MATERIAL                             7.8                              SS316LN
+COMPOUND    -0.67145      IRON    -0.185  CHROMIUM   -0.1125    NICKELSS316LN
+COMPOUND       -0.02  MANGANES     -0.01   SILICON  -0.00045   PHOSPHOSS316LN
+COMPOUND     -0.0003    SULFUR   -0.0003    CARBON                    SS316LN
+* Cast iron
+*
+MATERIAL                             7.2                              Cast_iro
+COMPOUND     -93.565      IRON      -3.1    CARBON       -2.   SILICONCast_iro
+COMPOUND       -0.75  MANGANES      -0.5   PHOSPHO    -0.085    SULFURCast_iro
+MATERIAL                              8.                              SS304L
+COMPOUND    -0.68045      IRON     -0.19  CHROMIUM      -0.1    NICKELSS304L
+COMPOUND       -0.02  MANGANES   -0.0075   SILICON    -0.001  NITROGENSS304L
+COMPOUND     -0.0003    CARBON  -0.00045   PHOSPHO   -0.0003    SULFURSS304L
+* //DEactivating card on 12th july
+MATERIAL          1.           0.0000899                              BoundH
+*  low-mat assignment for all the elements involved
+LOW-MAT      ARGON87       18.       -2.       87.                    ARGON
+* Deactivated on 12/7/21
+LOW-MAT       BoundH        1.       -3.      296.                    HYDROGEN
+* revisit
+LOW-MAT     ARGON-40       18.       -2.       87.                    ARGON
+LOW-MAT     ARGON87B       18.       -2.       87.                    ARGON
+LOW-MAT       ARGGAS       18.       -2.       87.                    ARGON
+* Deactivated on 15/7/21
+LOW-MAT     CARBON87        6.       -2.       87.                    CARBON
+* revisit
+LOW-MAT     CHROMI87       24.       -2.       87.                    CHROMIUM
+* revisit
+LOW-MAT     NICKEL87       28.       -2.       87.                    NICKEL
+* revisit
+LOW-MAT       IRON87       26.       -2.       87.                    IRON
+* revisit
+LOW-MAT     MANGAN87       25.       55.       87.                    MANGANES
+* revisit
+LOW-MAT     PHOSPH87       15.       31.       87.                    PHOSPHO
+* revisit
+LOW-MAT     SILICO87       14.       -2.       87.                    SILICON
+LOW-MAT      BOR1087        5.       10.       87.                    BORON-10
+LOW-MAT      BOR1187        5.       11.       87.                    BORON-11
+LOW-MAT     GADOLINI       64.       -2.       87.                    GADOLINI
+LOW-MAT     NITROGEN        7.       -2.       87.                    NITROGEN
+* included sulfur , to address GDS
+LOW-MAT       SULFUR       16.       -2.       87.                    SULFUR
+LOW-MAT     HYDROGEN        1.       11.      296.                    HYDROG-1
+LOW-MAT     MAGNESIU       12.       -2.      296.                    MAGNESIU
+LOW-MAT      CALCIUM       20.       -2.      296.                    CALCIUM
+LOW-MAT     POTASSIU       19.       -2.      296.                    POTASSIU
+LOW-MAT         CU87       29.       -2.       87.                    COPPER
+EMFCUT       -1.E-05    3.E-06        1.    VACUUM  @LASTMAT          PROD-CUT
+PART-THR       -0.01   NEUTRON   NEUTRON                 0.0
+DELTARAY      0.0001                        VACUUM  @LASTMAT
+DELTARAY        .001
+*EMFCUT       -5.E-04    1.E-04        1.       AIR       AIR          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.   ARGON87   ARGON87          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.  ARGON-40  ARGON-40          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.  ARGON87B  ARGON87B          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.    ARGGAS    ARGGAS          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.       FR4       FR4          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.       G10       G10          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.    SS304L    SS304L          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.      CU87      CU87          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.  Concrete  Concrete          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.      IRON      IRON          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.  TUNGSTEN  TUNGSTEN          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.  ALUMINUM  ALUMINUM          PROD-CUT
+EMFCUT       -1.E-02    3.E-03        1.  S235stee  S235stee          PROD-CUT
+EMFCUT       -1.E-05    3.E-06        1.   AISI304   AISI304          PROD-CUT
+DELTARAY        0.01                      Concrete  Concrete          NOPRINT
+DELTARAY        0.01                          CU87      CU87          NOPRINT
+DELTARAY        0.01                      ARGON87B  ARGON87B
+DELTARAY        0.01                        SS304L    SS304L
+DELTARAY        0.01                          IRON      IRON
+*DELTARAY        0.01                      ALUMINUM  ALUMINUM          NOPRINT
+*DELTARAY        0.01                      S235stee  S235stee
+* 3 milliseconds time-cut
+*TIME-CUT    3000000.
+* Added so as to transport neutron of all energies
+*LOW-BIAS        187.                       SensVol   SensVol
+ASSIGNMA      SS304L  Rint_ins
+ASSIGNMA         AIR     world
+ASSIGNMA      SS304L   Rext_SS
+ASSIGNMA         AIR  Rext_OUT
+*ASSIGNMA    POLYETHY
+ASSIGNMA      SS304L     RFRV6
+ASSIGNMA      SS304L     RFRV5
+ASSIGNMA      SS304L     RFRV4
+ASSIGNMA      SS304L     RFRV3
+ASSIGNMA      SS304L     RFRV1
+ASSIGNMA      SS304L     RFRV2
+ASSIGNMA      SS304L     RBBV6
+ASSIGNMA      SS304L     RBBV5
+ASSIGNMA      SS304L     RBBV4
+ASSIGNMA      SS304L     RBBV3
+ASSIGNMA      SS304L     RBBV2
+ASSIGNMA      SS304L     RBBV1
+ASSIGNMA      SS304L     RRIV1
+ASSIGNMA      SS304L     RRIV2
+ASSIGNMA      SS304L     RRIV3
+ASSIGNMA      SS304L     RRIV4
+ASSIGNMA      SS304L     RRIV5
+ASSIGNMA      SS304L     RRIV6
+ASSIGNMA      SS304L     RLEV1
+ASSIGNMA      SS304L     RLEV2
+ASSIGNMA      SS304L     RLEV3
+ASSIGNMA      SS304L     RLEV4
+ASSIGNMA      SS304L     RLEV5
+ASSIGNMA      SS304L     RLEV6
+ASSIGNMA      SS304L      RFH1
+ASSIGNMA      SS304L      RFH2
+ASSIGNMA      SS304L      RFH3
+ASSIGNMA      SS304L      RFH4
+ASSIGNMA      SS304L      RFH5
+ASSIGNMA      SS304L     RBCH1
+ASSIGNMA      SS304L     RBCH3
+ASSIGNMA      SS304L     RBCH4
+ASSIGNMA      SS304L     RBCH5
+ASSIGNMA      SS304L     RBCH6
+ASSIGNMA      SS304L      RFH6
+ASSIGNMA      SS304L     RBCH2
+ASSIGNMA     Plywood       RW1
+ASSIGNMA     Polyure    RPOLY1
+ASSIGNMA      TGlass       RW2
+ASSIGNMA    ALUMINUM       RW7
+ASSIGNMA      TGlass       RW5
+ASSIGNMA     Plywood       RW3
+ASSIGNMA     Plywood    RPOLY2
+ASSIGNMA     Polyure       RW4
+ASSIGNMA    Polyure2   RPolyT1
+*ASSIGNMA    Polyure2   RPolyT2
+ASSIGNMA     Plywood    RSSint
+ASSIGNMA      SS304L     RRIH1
+ASSIGNMA      SS304L     RRIH2
+ASSIGNMA      SS304L     RRIH3
+ASSIGNMA      SS304L     RRIH4
+ASSIGNMA      SS304L     RRIH5
+ASSIGNMA      SS304L     RRIH6
+ASSIGNMA      SS304L     RLEH1
+ASSIGNMA      SS304L     RLEH2
+ASSIGNMA      SS304L     RLEH3
+ASSIGNMA      SS304L     RLEH4
+ASSIGNMA      SS304L     RLEH5
+ASSIGNMA      SS304L     RLEH6
+ASSIGNMA      SS304L    RCETR1
+ASSIGNMA      SS304L    RCETR2
+ASSIGNMA      SS304L    RCETR3
+ASSIGNMA      SS304L    RCETR4
+ASSIGNMA      SS304L    RCETR5
+ASSIGNMA      SS304L    RCETR6
+ASSIGNMA      SS304L     RCEL1
+ASSIGNMA      SS304L     RCEL2
+ASSIGNMA      SS304L     RCEL3
+ASSIGNMA      SS304L     RCEL4
+ASSIGNMA      SS304L     RCEL5
+ASSIGNMA      SS304L     RCEL6
+ASSIGNMA      SS304L    RFLTr1
+ASSIGNMA      SS304L    RFLTr2
+ASSIGNMA      SS304L    RFLTr3
+ASSIGNMA      SS304L    RFLTr4
+ASSIGNMA      SS304L    RFLTr5
+ASSIGNMA      SS304L    RFLTr6
+ASSIGNMA      SS304L     RFLL1
+ASSIGNMA      SS304L     RFLL2
+ASSIGNMA      SS304L     RFLL5
+ASSIGNMA      SS304L     RFLL4
+ASSIGNMA      SS304L     RFLL3
+ASSIGNMA      SS304L     RFLL6
+ASSIGNMA     Polyure    SecMem
+*#if  
+* outer_outer_LArbath
+*ASSIGNMA    ARGON-40  LAr_Bath
+*#endif  
+ASSIGNMA    BLCKHOLE     world
+ASSIGNMA      VACUUM      void
+ASSIGNMA     GRSasso      rock
+ASSIGNMA    BLCKHOLE   outside
+ASSIGNMA      STDAIR      hall
+*ASSIGNMA        CU87    Vessel
+* LAr_bath_SAGAR
+ASSIGNMA     ARGON87  LAr_Bath
+* Outer_LAr_Buffer_SAGAR
+*ASSIGNMA    ARGON87B  OuterLAr
+* ACRYLIC for now but ACRYLIC +Gd_SAGAR
+*ASSIGNMA      ACRYGD    ACR_Gd
+ASSIGNMA    TITANIUM    CuWall
+* Inner_Ar_assigned_Ar-40_SAGAR
+ASSIGNMA     ARGON87  Inner_Ar
+* ACRYLIC_FOR_TPC_WALL_SAGAR
+ASSIGNMA      ACRYGD   TPCwall
+ASSIGNMA     ACRYLIC   Sislabd
+ASSIGNMA     ACRYLIC   Sislabu
+ASSIGNMA      ARGGAS   Sislabg
+ASSIGNMA     ARGON87   SensVol
+*RESNUCLE          3.      -84.       90.             SensVol 35700000.UARTPC
+*RESNUCLE          3.      -85.       90.             TPCwall          WALLACRY
+*RESNUCLE          3.      -86.       90.            Inner_Ar          UARVET
+*RESNUCLE          3.      -87.       90.             Sislabg          SILSLB
+*RESNUCLE          3.      -88.       90.              CuWall          CUWALL
+* Activated on 7/12/21
+USRBIN           10.     MUON-      -45.     1900.     1300.     1750.muons
+USRBIN        -1500.    -1300.     -550.      250.      250.      250. &
+* Activated on 7/12/21
+*USRBIN           10.   NEUTRON      -90.     1900.     1300.     1750.neutrons
+*USRBIN        -1500.    -1300.     -550.      250.      250.      250. &
+* * ---  this option card activates the call into the  mgdraw.f  routine
+*
+USERDUMP        100.                 0.0        1.                    allfile
+*EVENTBIN        -12.    ENERGY      -60.   SensVol                    SenSVol
+*EVENTBIN        -12.    ENERGY      -61.  Inner_Ar                    Inner_Ar
+*EVENTBIN        -12.    ENERGY      -62.  LAr_Bath                    LAr_Bath
+* Activated 2 cards on 12/7/21
+*USRBIN           10.    ENERGY      -50.     1900.     1350.     1750.energy
+*USRBIN        -1350.    -1350.     -550.      250.      250.      250. &
+*USRBIN           10.  RES-NUCL      -51.     1900.     1350.     2000.RES-NUCL
+*USRBIN        -1350.    -1350.    -1000.      300.      300.      300. &
+*SCORE
+#if 0
+#include seed.inp
+#endif
+RANDOMIZ          1. 4. 
+*         ---------|---------|---------|---------|---------|---------|
+START       100.       0.0       0.0
+STOP
+
