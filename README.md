@@ -1,0 +1,12 @@
+# Fluka-Scripts
+
+DS_20k_fluka_updated.inp;
+
+This is the input file which contains the information about the materials of the detector, dimensions, and densities for the DarkSide-20k experiment. 
+This files is updated according to the recent TDR document from DarkSide collaboration. 
+
+Mgdraw_ds_updated.f 
+This files provides the information about the collision tape which is the output of fluka. This file is a user routine file in fluka simulation. We use this file
+file to write the collision tape, i.e which region we want to record and then it provides us the text file with energies, particle type, time etc.
+
+
